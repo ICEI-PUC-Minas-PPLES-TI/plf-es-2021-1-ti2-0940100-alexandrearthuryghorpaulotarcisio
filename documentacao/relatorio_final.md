@@ -9,7 +9,7 @@ Arthur Vítor Sapore - arthur.sapore@sga.pucminas.br
 
 Paulo Victor Jesus de Sousa
 
-Tarcísio Pais de Souza Junior - Login: tarcisio.junior.1284505@sga.pucminas.br
+Tarcísio Pais de Souza Junior - tarcisio.junior.1284505@sga.pucminas.br
 
 ---
 
