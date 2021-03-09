@@ -5,7 +5,7 @@ Alexandre Costa e Souza
 
 Arthur Vítor Sapore - arthur.sapore@sga.pucminas.br
 
-Yghor Ribas Gomes
+**Yghor Ribas Gomes - yghor.gomes@sga.pucminas.br**
 
 Paulo Victor Jesus de Sousa
 
