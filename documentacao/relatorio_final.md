@@ -7,7 +7,7 @@ Arthur Vítor Sapore - arthur.sapore@sga.pucminas.br
 
 **Yghor Ribas Gomes - yghor.gomes@sga.pucminas.br**
 
-Paulo Victor Jesus de Sousa
+Paulo Victor Jesus de Sousa - paulo.sousa.1137246@sga.pucminas.br
 
 Tarcísio Pais de Souza Junior - tarcisio.junior.1284505@sga.pucminas.br
 
@@ -39,6 +39,8 @@ mostrar algum resultado relevante do trabalho (até 10 linhas)._
 
 
 ## 2. Participantes do processo
+
+Diversos são os perfis dos Stakeholders chaves para uma locadora de veículos. Por exemplo: adultos de 25 anos ou mais, pais de família, recentemente desempregados que possuem CNH e que precisam de um automóvel para trabalhar como motorista de aplicativo; um casal de turistas de classe média, que precisarão de um automóvel para se locomoverem entres os pontos turísticos de uma cidade; empresas de serviços, como por exemplo, uma empresa de telefonia ou provedora de internet que precisa de uma frota de veículos para seus técnicos realizarem a manutenção ou a instalação de pontos de acesso para seus clientes.
 
 ## 3. Modelagem do processo de negócio
 
