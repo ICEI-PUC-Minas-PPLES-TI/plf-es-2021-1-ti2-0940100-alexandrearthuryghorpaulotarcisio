@@ -38,10 +38,10 @@ http://www.virapagina.com.br/abla2020/26/#zoom=z
 Preços de compra e manutenção desse tipo de bem é muito custosa, tornando-o inviável aqueles que precisam de um uso momentâneo desses veículos.
 
 1.3 Objetivo Geral:
-Possibilitar uma comunicação ágil e fácil entre locador e locatários.
+Criar mais uma opção para interessados em alugar qualquer tipo de veículo.
 
 1.3.1 Objetivos Especificos:
-Desenvolver um software que será a plataforma de comunicação entre esse dois.
+Alugar carros.
 
 1.4 Justificativa:
 Grande volume de clientes que procuram esse tipo de serviço desde 2015.
@@ -59,7 +59,8 @@ Apresente aqui os problemas existentes que viabilizam sua proposta. Apresente o 
 
 ## 3.2. Descrição Geral da proposta
 
-Apresente aqui uma descrição da sua proposta abordando seus limites e suas ligações com as estratégias e objetivos do negócio. Apresente aqui as oportunidades de melhorias.
+O objetivo da LocaLex é ser uma locadora de automóveis, atuando inicialmente em Belo Horizonte, atendendo tanto pessoa física quanto pessoa jurídica.
+Os serviços da LocaLex começam pelo o aluguél de um veículo (ou uma frota de veículos, dependendo do contrato), em casos de problemas o acionamento do seguro e por fim a devolução com término do contrato.
 
 ## 3.3. Processos
 
