@@ -26,16 +26,25 @@ mostrar algum resultado relevante do trabalho (até 10 linhas)._
 
 
 ## 1. Introdução
+  A indústria automobilística está presente no desenvolvimento de projetos e montagem de veículos, esse setor veio modificando nossas vidas desde o início do século XIX. Ela foi fundamental até mesmo para a globalização, "encurtando" as distâncias entre uma cidade e outra, mas não apenas na globalização, ela também é um dos moldes da nossa sociedade moderna, transformando uma ferramenta de locomoção em um sinal de status e luxo.
+  Apesar de muito útil esses automóveis custosos àqueles que os possuem, tanto para a aquisição quanto para a manutenção. Decorrendo desse fato muitas pessoas optam pela locação, já que os custos desse tipo de serviços são extremamente ínfimos se comparados com a compra de um veículo.
 
 1.1 Contextualização:
+De acordo com o Anuário Brasileiro do Setor de Locação de Veículos | 2020, o setor de aluguel de automóveis vem se expandindo desde o final de 2015, com um aumento de aproximadamente 7bilhões de faturamento líquido entre 2016 e 2019, uma taxa de imposto muito menor se comparado com as taxas de compra de um automóvel e uma impressionante alta de usuários desse tipo de serviço, saindo de 23,2milhões em 2016 até 49,6milhões em 2019.
+
+http://www.virapagina.com.br/abla2020/26/#zoom=z
 
 1.2 Problema:
+Preços de compra e manutenção desse tipo de bem é muito custosa, tornando-o inviável aqueles que precisam de um uso momentâneo desses veículos.
 
 1.3 Objetivo Geral:
+Possibilitar uma comunicação ágil e fácil entre locador e locatários.
 
 1.3.1 Objetivos Especificos:
+Desenvolver um software que será a plataforma de comunicação entre esse dois.
 
 1.4 Justificativa:
+Grande volume de clientes que procuram esse tipo de serviço desde 2015.
 
 
 ## 2. Participantes do processo
