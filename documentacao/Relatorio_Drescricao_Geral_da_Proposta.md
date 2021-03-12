@@ -1,0 +1,3 @@
+# Descrição Geral da Proposta
+
+O objetivo da LocaLex é ser uma locadora de automóveis, onde os processos de escolha, reservar de um veículo e o período de aluguel, será realizado totalmente via Web, visando a diminuição de custos operacionais. A empresa atuará inicialmente em Belo Horizonte, atendendo tanto pessoa física quanto pessoa jurídica. Os serviços da LocaLex começam pela escolha e o período do aluguel de um veículo no site da empresa, logo depois o cliente se direcionará até uma loja física da empresa com a habilitação em mãos para poder pegar o carro. Após o período de aluguel do veículo, o cliente deverá se dirigir até a loja com o carro no mesmo estado que lhe foi arrendado, caso isso não ocorra, será acionado o seguro e o cliente deverá pagar a franquia.
