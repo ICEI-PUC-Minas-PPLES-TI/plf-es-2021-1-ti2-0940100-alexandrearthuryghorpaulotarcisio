@@ -24,5 +24,9 @@ Como consequência, os usuários de veículos alugados com a finalidade ao traba
 Referencias:
 
 *https://www.panrotas.com.br/mercado/locadoras-de-veiculos/2020/03/o-que-as-locadoras-estao-fazendo-em-relacao-ao-coronavirus_172028.html
+
+
 *https://extra.globo.com/economia/preco-de-aluguel-de-veiculos-dispara-na-pandemia-motoristas-de-app-tem-que-devolver-carros-24803744.html
+
+
 *https://www.moneytimes.com.br/retomada-do-turismo-setor-de-aluguel-de-carros-alerta-sobre-alta-demanda/
