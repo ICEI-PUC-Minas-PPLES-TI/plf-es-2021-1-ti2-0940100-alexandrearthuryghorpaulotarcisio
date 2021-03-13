@@ -60,7 +60,7 @@ Apresente aqui os problemas existentes que viabilizam sua proposta. Apresente o 
 ## 3.2. Descrição Geral da proposta
 
 O objetivo da LocaLex é ser uma locadora de automóveis, atuando inicialmente em Belo Horizonte, atendendo tanto pessoa física quanto pessoa jurídica.
-Os serviços da LocaLex começam pelo o aluguél de um veículo (ou uma frota de veículos, dependendo do contrato), em casos de problemas o acionamento do seguro e por fim a devolução com término do contrato.
+Os serviços da LocaLex começam pelo o aluguél de um veículo (ou uma frota de veículos dependendo do contrato), em casos de problemas o acionamento do seguro e por fim a devolução com término do contrato.
 
 ## 3.3. Processos
 
