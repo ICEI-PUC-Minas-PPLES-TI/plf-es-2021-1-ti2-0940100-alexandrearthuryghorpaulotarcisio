@@ -55,7 +55,14 @@ Diversos são os perfis dos Stakeholders chaves para uma locadora de veículos. 
 
 ## 3.1. Análise da situação atual
 
-Apresente aqui os problemas existentes que viabilizam sua proposta. Apresente o modelo do sistema como ele funciona hoje. Caso sua proposta seja inovadora e não existam processos claramente definidos, _ **apresente como as tarefas que o seu sistema pretende implementar são executadas atualmente** _, mesmo que não se utilize tecnologia computacional.
+Atualmente, as empresas de aluguéis de automóveis utilizam de sites e aplicativos mobile basicamente com as mesmas funcionalidades, começando com o cliente informando o local onde será realizada a retirada do automóvel, o dia e horário que será feita e dia e horário da entrega. 
+Algumas empresas utilizam o sistema de chatbot para retirada de dúvidas (algo muito útil) e outras não, contendo fóruns específicos para o assunto. Outra diferença entre algumas empresas do setor, é que há aquelas que alugam somente dentre pacotes disponíveis, no caso, mínimo de 30 dias, se tratando de um ponto decisivo na escolha da empresa para o aluguel. 
+
+Após informado os dados de retirada e entrega (dia e horário), o cliente escolhe dentro as categorias - Econômico, Intermediário, Suv, Executivo, Pick-Up, entre outros - o veículo de seu interesse. Vale acrescentar um ponto de melhoria dessa etapa: mostrar para o usuário apenas os veículos disponíveis para o cliente, pois hoje, é mostrado alguns veículos, mas eles estão como "indisponível para retirada", sendo desnecessária sua visualização no momento.
+
+Chega então a etapa de resumo da reserva, com o veículo escolhido, além da descrição do valor total a ser pago, com a possibilidade de acrescentar adicionais como "cobertura para terceiros".
+Por fim tem-se o cadastro (para os novatos) ou o login (para os que já tem conta), adicionando o meio de pagamento e fechando sua reserva de acordo com as informações detelhadas da etapa anterior.
+
 
 ## 3.2. Descrição Geral da proposta
 
