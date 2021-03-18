@@ -1,4 +1,4 @@
-# Análise da Situação Atual
+# Análise da Situação Atual - Pandemia
 A empresa ficticia criada para a disciplina - LocaLex Rent Car Point - atua no ramo de aluguel de automóveis, um dos segmentos mais afetados para esta nova realidade que estamos vivenciando com a pandemia devido ao Covid-19.
 Diante disso, com o turismo enfrentando um grande obstáculo, as empresas do setor estão agindo de maneira diferente, visando mitigar os prejuízos gerados.
 
