@@ -82,7 +82,7 @@ O modelo abaixo apresenta de forma geral as etapas envolvidas no processo de alg
 
 Subprocesso responsável pelo cadastro ou login do usuário na plataforma LocaLex Rent Car Point. O usuário informa algumas informações sensíveis ao cadastrar, ou o email e senha, caso já tenha uma conta no sistema.
 
-![Exemplo de um Modelo BPMN](imagens/Subprocesso_Geral_Cadastarr_Login.PNG "Subprocesso do processo Aluguel de Automóveis Geral.")
+![Exemplo de um Modelo BPMN](imagens/Subprocesso_Geral_Cadastrar_Login.PNG "Subprocesso do processo Aluguel de Automóveis Geral.")
 
 ## 4. Projeto da Solução
 
