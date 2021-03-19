@@ -71,18 +71,18 @@ Os serviços da LocaLex começam pelo o aluguél de um veículo (ou uma frota de
 
 ## 3.3. Processos
 
-### 3.3.1 Processo 1 – NOME DO PROCESSO
+### 3.3.1 Processo 1 – Aluguel de Automóveis Geral
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 1. Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN.
+O modelo abaixo apresenta de forma geral as etapas envolvidas no processo de alguel de um veículo pela plataforma LocaLex Rent Car Point. Se trata de um processo geral, por isso pode não estar totalmente entendívei. O subprocesso presente será apresentado adiante.
 
-![Exemplo de um Modelo BPMN do PROCESSO 1](imagens/process.png "Modelo BPMN do Processo 1.")
+![Exemplo de um Modelo BPMN](imagens/Modelo_Geral_Aluguel.PNG "Modelo BPMN do Processo Geral de Aluguel de Automóveis.")
 
 
-### 3.3.2 Processo 2 – NOME DO PROCESSO
+### 3.3.2 Processo 2 – Subprocesso Cadastro/Login do Processo "Aluguel de Automóveis Geral"
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 2. Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN.
+Subprocesso responsável pelo cadastro ou login do usuário na plataforma LocaLex Rent Car Point. O usuário informa algumas informações sensíveis ao cadastrar, ou o email e senha, caso já tenha uma conta no sistema.
 
-![Exemplo de um Modelo BPMN do PROCESSO 2](imagens/call_process.png "Modelo BPMN do Processo 2.")
+![Exemplo de um Modelo BPMN](imagens/Subprocesso_Geral_Cadastarr_Login.PNG "Subprocesso do processo Aluguel de Automóveis Geral.")
 
 ## 4. Projeto da Solução
 
