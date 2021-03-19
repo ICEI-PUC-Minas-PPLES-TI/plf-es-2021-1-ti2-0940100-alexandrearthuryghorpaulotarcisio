@@ -66,8 +66,11 @@ Por fim tem-se o cadastro (para os novatos) ou o login (para os que já tem cont
 
 ## 3.2. Descrição Geral da proposta
 
-O objetivo da LocaLex é ser uma locadora de automóveis, atuando inicialmente em Belo Horizonte, atendendo tanto pessoa física quanto pessoa jurídica.
-Os serviços da LocaLex começam pelo o aluguél de um veículo (ou uma frota de veículos dependendo do contrato), em casos de problemas o acionamento do seguro e por fim a devolução com término do contrato.
+O objetivo da LocaLex é ser uma locadora de automóveis, onde os processos de escolha, reserva de um veículo e o período de aluguel, será realizado totalmente via Web, visando a diminuição de custos. Um ponto de melhoria que será acrescentado nessa etapa, em relação aos processos de outras empresas do ramo, será: mostrar para o usuário apenas os veículos disponíveis para o cliente no momento da interação do cliente com o nosso sistema, pois, atualmente é mostrado alguns veículos, mas eles estão como “indisponível para retirada", sendo desnecessária sua visualização no momento.
+
+A empresa atuará inicialmente em Belo Horizonte, atendendo tanto pessoa física quanto pessoa jurídica. Os serviços da LocaLex começam pela escolha e o período do aluguel de um veículo no site da empresa, logo depois o cliente se direcionará até uma loja física da empresa com a habilitação em mãos para poder pegar o carro. Um diferencial que adotaremos no sistema da empresa, será salvar os dados de aluguéis anteriores, realizados pelo cliente, como por exemplo: Se um cliente aluga um Fox 2018, prata, com ar-condicionado e paga no cartão com um número x e sem cobertura para terceiros, quando ele for alugar novamente, ele pode selecionar esse registro com tudo já preenchido, ele não vai precisar preencher os dados novamente, só se ele quiser adicionar ou remover produtos adicionais. Isso será feito com o intuito de, caso ele queira alugar o mesmo veículo, algumas etapas sejam removidas e o processo seja mais simples.
+
+Após o período de aluguel do veículo, o cliente deverá se dirigir até a loja com o carro no mesmo estado que lhe foi arrendado, caso o carro não esteja no mesmo estado, será acionado o seguro e o cliente deverá pagar a franquia.
 
 ## 3.3. Processos
 
