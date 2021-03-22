@@ -88,7 +88,14 @@ Subprocesso responsável pelo cadastro ou login do usuário na plataforma LocaLe
 ![Exemplo de um Modelo BPMN](imagens/Subprocesso_Geral_Cadastrar_Login.PNG "Subprocesso do processo Aluguel de Automóveis Geral.")
 
 
-### 3.3.3 Processo 3 – Processo de Avaliação do Aluguel de Automóveis
+### 3.3.3 Processo 3 – Processo de Escolha de um Carro
+
+Processo que representa as etapas que o cliente terá de passar na escolha de um carro para seguir o fluxo de locação.
+
+![Exemplo de um Modelo BPMN](imagens/ProcessoDeEscolhaDoVeiculo.jpeg "Processo de Escolha de um Carro").
+
+
+### 3.3.4 Processo 4 – Processo de Avaliação do Aluguel de Automóveis
 
 Processo responsável por sugerir ao cliente uma avaliação e um comentário do serviço de locação de veículo da LocaLex.
 
