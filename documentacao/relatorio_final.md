@@ -92,7 +92,7 @@ Subprocesso responsável pelo cadastro ou login do usuário na plataforma LocaLe
 
 Processo que represta o login do cliente no sistema da Localex Rent Car Point. O usuário informa seus dados pessoais e a partir de algumas verificações o cadastro pode ser efetivado ou não.
 
-![Exemplo de um Modelo BPMN](imagens/CadastroCliente.PNG "Processo de Cadastro do Cliente no Sistema").
+![Exemplo de um Modelo BPMN](imagens/CadastroCliente.png "Processo de Cadastro do Cliente no Sistema").
 
 
 ### 3.3.4 Processo 4 – Processo de Escolha de um Carro
