@@ -104,9 +104,9 @@ Processo que representa as etapas que o cliente terá de passar na escolha de um
 
 ### 3.3.5 Processo 5 – Processo de Avaliação do Aluguel de Automóveis
 
-Processo responsável por sugerir ao cliente uma avaliação e um comentário do serviço de locação de veículo da LocaLex.
+Processo responsável por sugerir ao cliente uma avaliação e um comentário do serviço de Locação de Veículo da LocaLex.
 
-![Exemplo de um Modelo BPMN](imagens/Processo_avaliação.jpg "Processo de avaliação do aluguel.")
+![Processo de Avaliação](imagens/Processo_Avaliacao.png "Processo de avaliação do aluguel.")
 
 ## 4. Projeto da Solução
 
