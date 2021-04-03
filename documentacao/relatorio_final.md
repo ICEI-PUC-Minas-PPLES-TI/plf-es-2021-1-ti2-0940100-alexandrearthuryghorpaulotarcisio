@@ -150,14 +150,18 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 
 #### Processo 3 – Processo de Cadastro do Cliente
 
-**Nome da atividade 1**
+**Cadastrar**
 
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 | --- | --- | --- | --- |
-| [Nome do campo] | [Área de texto, Caixa de texto, Número, Data, Imagem, Seleção única, Múltipla escolha, Arquivo, Link, Tabela] |  |  |
-| ***Exemplo:***  |    |     |
-| login | Caixa de Texto | formato de e-mail |  |
-| senha | Caixa de Texto | mínimo de 8 caracteres |   |
+| Nome Completo | Caixa de Texto |  |  |
+| Sexo | Seleção única |  |  |
+| Email | Caixa de Texto | Formato de e-mail |  |
+| CPF | Número | Mínimo de 11 cacteres |  |
+| Data de Nascimento | Caixa de Texto | Mínimo de 21 anos |   |
+| Inserir CNH | Número | Mínimo 11 caracteres |   |
+| Senha | Caixa de Texto | Mínimo de 8 caracteres |   |
+| Confirmar Senha | Caixa de Texto | Valor idêntico ao da senha |   |
 
 **Nome da atividade 2**
 
