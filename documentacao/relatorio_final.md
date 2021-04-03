@@ -163,28 +163,20 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 | Senha | Caixa de Texto | Mínimo de 8 caracteres |   |
 | Confirmar Senha | Caixa de Texto | Valor idêntico ao da senha |   |
 
-**Nome da atividade 2**
-
-| **Campo** | **Tipo** | **Restrições** | **Valor default** |
-| --- | --- | --- | --- |
-| [Nome do campo] | [Área de texto, Caixa de texto, Número, Data, Imagem, Seleção única, Múltipla escolha, Arquivo, Link, Tabela] |  |  |
-|    |    |     |
 
 #### Processo 4 – Processo de Escolha de um Carro
 
-**Nome da atividade 1**
+**Escolhendo um Carro**
 
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 | --- | --- | --- | --- |
 | [Nome do campo] | [Área de texto, Caixa de texto, Número, Data, Imagem, Seleção única, Múltipla escolha, Arquivo, Link, Tabela] |  |  |
-|    |    |     |
+|   Selecionar Carro  |   Seleção Única |  | |
+|   Selecionar Proteções  |   Seleção  | Mínimo uma proteção selecionada | Proteção básica. |
+|   Selecionar Proteções Extras  |   Seleção | |  |
+|   Selecionar Acessórios  |   Seleção Única | |  |
+|   Informar Quantidade de Acessórios  |   Seleção Única | Mínimo 1 | 1 |
 
-**Nome da atividade 2**
-
-| **Campo** | **Tipo** | **Restrições** | **Valor default** |
-| --- | --- | --- | --- |
-| [Nome do campo] | [Área de texto, Caixa de texto, Número, Data, Imagem, Seleção única, Múltipla escolha, Arquivo, Link, Tabela] |  |  |
-|    |    |     |
 
 #### Processo 5 – Processo de Avaliação do Aluguel de Automóveis
 
