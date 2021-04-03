@@ -170,12 +170,11 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 | --- | --- | --- | --- |
-| [Nome do campo] | [Área de texto, Caixa de texto, Número, Data, Imagem, Seleção única, Múltipla escolha, Arquivo, Link, Tabela] |  |  |
 |   Selecionar Carro  |   Seleção Única |  | |
 |   Selecionar Proteções  |   Seleção  | Mínimo uma proteção selecionada | Proteção básica. |
-|   Selecionar Proteções Extras  |   Seleção | |  |
+|   Selecionar Proteções Extras  |  Múltipla escolha | |  |
 |   Selecionar Acessórios  |   Seleção Única | |  |
-|   Informar Quantidade de Acessórios  |   Seleção Única | Mínimo 1 | 1 |
+|   Informar Quantidade de Acessórios  |  Seleção Única | Quantidade mínima: 1 | 1 |
 
 
 #### Processo 5 – Processo de Avaliação do Aluguel de Automóveis
