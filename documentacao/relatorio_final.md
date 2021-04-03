@@ -154,8 +154,8 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 | --- | --- | --- | --- |
-| Nome Completo | Caixa de Texto |  |  |
-| Sexo | Seleção única |  |  |
+| Nome Completo | Caixa de Texto | Preenchimento obrigatório |  |
+| Sexo | Seleção única | Uma opção selecionado |  |
 | Email | Caixa de Texto | Formato de e-mail |  |
 | CPF | Número | Mínimo de 11 cacteres |  |
 | Data de Nascimento | Caixa de Texto | Mínimo de 21 anos |   |
