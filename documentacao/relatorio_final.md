@@ -114,23 +114,33 @@ Processo responsável por sugerir ao cliente uma avaliação e um comentário do
 
 Descrever aqui cada uma das propriedades das atividades de cada um dos processos. Devem estar relacionadas com o modelo de processo apresentado anteriormente.
 
+
 #### Processo 1 – Aluguel de Automóveis Geral
 
-**Nome da atividade 1**
+**Pesquisar por veículos**
 
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 | --- | --- | --- | --- |
-| [Nome do campo] | [Área de texto, Caixa de texto, Número, Data, Imagem, Seleção única, Múltipla escolha, Arquivo, Link, Tabela] |  |  |
-| ***Exemplo:***  |    |     |
-| login | Caixa de Texto | formato de e-mail |  |
-| senha | Caixa de Texto | mínimo de 8 caracteres |   |
+| Todos | Área de texto |  |  |
+| SUV | Área de texto |  |  |
+| Pick-Up | Área de texto |  |  |
+| Executivo | Área de texto |  |  |
+| Intermediário | Área de texto |  |  |
+| Econômico | Área de texto |  |  |
 
-**Nome da atividade 2**
+**Realizar o Login*
 
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 | --- | --- | --- | --- |
-| [Nome do campo] | [Área de texto, Caixa de texto, Número, Data, Imagem, Seleção única, Múltipla escolha, Arquivo, Link, Tabela] |  |  |
-|    |    |     |
+| Email | Caixa de texto | Deve está cadastrado no banco de dados |  |
+| Senha | Caixa de texto | Deve está associado a um usuário |  |
+
+**Resumo da Reserva**
+
+| **Campo** | **Tipo** | **Restrições** | **Valor default** |
+| --- | --- | --- | --- |
+| Resumo da Reserva | Área de texto |  |  |
+| Continuar | Link |  |  |
 
 #### Processo 2 – Subprocesso Cadastro/Login do Processo "Aluguel de Automóveis Geral"
 
@@ -147,6 +157,7 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 | --- | --- | --- | --- |
 | [Nome do campo] | [Área de texto, Caixa de texto, Número, Data, Imagem, Seleção única, Múltipla escolha, Arquivo, Link, Tabela] |  |  |
 |    |    |     |
+
 
 #### Processo 3 – Processo de Cadastro do Cliente
 
