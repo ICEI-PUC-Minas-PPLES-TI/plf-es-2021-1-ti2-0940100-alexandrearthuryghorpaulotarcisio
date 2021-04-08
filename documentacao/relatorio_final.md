@@ -121,19 +121,19 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 | --- | --- | --- | --- |
-| Todos | Área de texto |  |  |
-| SUV | Área de texto |  |  |
-| Pick-Up | Área de texto |  |  |
-| Executivo | Área de texto |  |  |
-| Intermediário | Área de texto |  |  |
-| Econômico | Área de texto |  |  |
+| Todos | Área de texto | Veículo já cadastrado |  |
+| SUV | Área de texto | Veículo já cadastrado |  |
+| Pick-Up | Área de texto | Veículo já cadastrado |  |
+| Executivo | Área de texto | Veículo já cadastrado |  |
+| Intermediário | Área de texto | Veículo já cadastrado |  |
+| Econômico | Área de texto | Veículo já cadastrado |  |
 
-**Realizar o Login*
+**Realizar o Login**
 
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 | --- | --- | --- | --- |
 | Email | Caixa de texto | Deve está cadastrado no banco de dados |  |
-| Senha | Caixa de texto | Deve está associado a um usuário |  |
+| Senha | Caixa de texto | Deve está associado a um email |  |
 
 **Resumo da Reserva**
 
