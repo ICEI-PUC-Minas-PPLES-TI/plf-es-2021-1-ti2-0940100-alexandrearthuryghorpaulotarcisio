@@ -133,7 +133,7 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 | --- | --- | --- | --- |
 | Email | Caixa de texto | Deve está cadastrado no banco de dados |  |
-| Senha | Caixa de texto | Deve está associado a um email |  |
+| Senha | Caixa de texto | Mínimo de 8 caracteres |  |
 
 **Resumo da Reserva**
 
