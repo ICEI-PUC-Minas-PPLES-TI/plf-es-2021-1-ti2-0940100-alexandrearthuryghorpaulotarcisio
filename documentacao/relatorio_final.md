@@ -144,20 +144,11 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 
 #### Processo 2 – Subprocesso Cadastro/Login do Processo "Aluguel de Automóveis Geral"
 
-**Nome da atividade 1**
+**Verifica Conta**
 
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 | --- | --- | --- | --- |
-| [Nome do campo] | [Área de texto, Caixa de texto, Número, Data, Imagem, Seleção única, Múltipla escolha, Arquivo, Link, Tabela] |  |  |
-|    |    |     |
-
-**Nome da atividade 2**
-
-| **Campo** | **Tipo** | **Restrições** | **Valor default** |
-| --- | --- | --- | --- |
-| [Nome do campo] | [Área de texto, Caixa de texto, Número, Data, Imagem, Seleção única, Múltipla escolha, Arquivo, Link, Tabela] |  |  |
-|    |    |     |
-
+| Possui conta? | Link |  |  |
 
 #### Processo 3 – Processo de Cadastro do Cliente
 
