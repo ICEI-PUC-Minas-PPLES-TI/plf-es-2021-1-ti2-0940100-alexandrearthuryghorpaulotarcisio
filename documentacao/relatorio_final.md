@@ -190,19 +190,19 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 
 #### Processo 5 – Processo de Avaliação do Aluguel de Automóveis
 
-**Nome da atividade 1**
+**Avaliação do aluguel**
 
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 | --- | --- | --- | --- |
-| [Nome do campo] | [Área de texto, Caixa de texto, Número, Data, Imagem, Seleção única, Múltipla escolha, Arquivo, Link, Tabela] |  |  |
-|    |    |     |
+| Selecionar Avaliação | Seleção única | Escolher no mínimo uma avaliação|  |
 
-**Nome da atividade 2**
+
+**Comentário do serviço**
 
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 | --- | --- | --- | --- |
-| [Nome do campo] | [Área de texto, Caixa de texto, Número, Data, Imagem, Seleção única, Múltipla escolha, Arquivo, Link, Tabela] |  |  |
-|    |    |     |
+| Comentar | Caixa de texto |  |  |
+
 
 ### 4.2. Tecnologias
 
