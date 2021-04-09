@@ -198,6 +198,7 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 ### 4.2. Tecnologias
 
 Tecnologias: HTML5,CSS3,JavaScript.
+
 Frameworks: Bootstrap.
 
 ![Esquema](imagens/SchemeTecnologies.png "Esquema das tecnologias")
