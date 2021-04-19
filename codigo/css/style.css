@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comfortaa';
+}
+
+.HEADER {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 201, 0, 0.5);
+}
+
+.HEADER i {
+    font-size: 16pt;
+}
+
+.HEADER button{
+    background: none;
+    border: none;
+}
+
+.HEADER__user {
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.HEADER__user .chev[aria-expanded="true"]{
+    transform: rotate(180deg);
+}
+
+.collapse__navMenu {
+    background: rgba(0, 201, 0, 0.5);
+    padding-bottom: 2vh;
+}
+
+.collapse__navMenu a {
+    color: black;
+}
+
+.MAIN {
+    margin: auto;
+    margin-top: 45px;
+}
+
+.MAIN__search {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    justify-content: space-evenly;
+    background: white;
+    box-shadow: 2px 2px 5px #363636f2;
+}
+
+.MAIN__search input{
+    flex: 0.95;
+    margin-left: 10px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.MAIN__types {
+    margin-top: 30px;
+}
+
+.MAIN__types .wrapper {
+    width: auto;
+    display: flex;
+    justify-content: start;
+    overflow-x: auto;
+}
+
+.MAIN__types .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90px;
+    height: 120px;
+    box-shadow: 1px 2px 2px #363636f2;
+    margin-right: 8px;
+}
+
+.MAIN__types .card img {
+    width: 90px;
+    height: 120px;
+}
+
+.MAIN__car {
+    margin-top: 30px;
+}
+
+.MAIN__car p {
+    text-align: center;
+}
