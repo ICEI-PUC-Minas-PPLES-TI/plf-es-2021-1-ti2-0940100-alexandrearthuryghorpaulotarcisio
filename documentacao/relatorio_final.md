@@ -92,14 +92,14 @@ Subprocesso responsável pelo cadastro ou login do usuário na plataforma LocaLe
 
 Processo que represta o login do cliente no sistema da Localex Rent Car Point. O usuário informa seus dados pessoais e a partir de algumas verificações o cadastro pode ser efetivado ou não.
 
-![Exemplo de um Modelo BPMN](artefatos/processos/CadastroCliente.png "Processo de Cadastro do Cliente no Sistema").
+![Exemplo de um Modelo BPMN](processos/CadastroCliente.png "Processo de Cadastro do Cliente no Sistema").
 
 
 ### 3.3.4 Processo 4 – Processo de Escolha de um Carro
 
 Processo que representa as etapas que o cliente terá de passar na escolha de um carro para seguir o fluxo de locação. O usuário deve escolher um carro dentro de cada classe desejada e selecionar o seguro obrigatório. A escolha de seguros extras e acessórios são opcionais ao usuário.
 
-![Exemplo de um Modelo BPMN](artefatos/processos/ProcessoDeEscolhaDoVeiculo.jpeg "Processo de Escolha de um Carro").
+![Exemplo de um Modelo BPMN](processos/ProcessoDeEscolhaDoVeiculo.jpeg "Processo de Escolha de um Carro").
 
 
 ### 3.3.5 Processo 5 – Processo de Avaliação do Aluguel de Automóveis
@@ -211,7 +211,7 @@ Apresente o modelo de dados. Defina o dicionário de dados com os respectivos fo
 
 Apresente aqui o Diagrama de Entidade-Relacionamento (DER) que contemple todos conceitos e atributos apresentados item anterior. Deve contemplar também o controle de acesso de usuários de acordo com os papeis definidos nos modelos do processo de negócio.
 
-![Diagrama de Entidade Relacionamento de Exemplo](artefatos/dados/ModeloER.png "Diagrama de Entidade Relacionamento")
+![Diagrama de Entidade Relacionamento de Exemplo](dados/ModeloER.png "Diagrama de Entidade Relacionamento")
 
 
 ## 6. Indicadores de desempenho
