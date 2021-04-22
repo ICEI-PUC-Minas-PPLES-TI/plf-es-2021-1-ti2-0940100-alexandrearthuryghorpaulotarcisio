@@ -201,7 +201,7 @@ Tecnologias: HTML5,CSS3,JavaScript.
 
 Frameworks: Bootstrap.
 
-![Esquema](imagens/SchemeTecnologies.png "Esquema das tecnologias")
+![Esquema](SchemeTecnologies.png "Esquema das tecnologias")
 
 ## 5. Modelagem de dados
 
@@ -211,7 +211,7 @@ Apresente o modelo de dados. Defina o dicionário de dados com os respectivos fo
 
 Apresente aqui o Diagrama de Entidade-Relacionamento (DER) que contemple todos conceitos e atributos apresentados item anterior. Deve contemplar também o controle de acesso de usuários de acordo com os papeis definidos nos modelos do processo de negócio.
 
-![Diagrama de Entidade Relacionamento de Exemplo](dados/ModeloER.png "Diagrama de Entidade Relacionamento")
+![Diagrama de Entidade Relacionamento de Exemplo](../artefatos/dados//ModeloER.png "Diagrama de Entidade Relacionamento")
 
 
 ## 6. Indicadores de desempenho
