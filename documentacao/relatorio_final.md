@@ -78,14 +78,14 @@ Após o período de aluguel do veículo, o cliente deverá se dirigir até a loj
 
 O modelo abaixo apresenta de forma geral as etapas envolvidas no processo de alguel de um veículo pela plataforma LocaLex Rent Car Point. Se trata de um processo geral, por isso pode não estar totalmente entendívei. O subprocesso presente será apresentado adiante.
 
-![Exemplo de um Modelo BPMN](imagens/Modelo_Geral_Aluguel.PNG "Modelo BPMN do Processo Geral de Aluguel de Automóveis.")
+![Exemplo de um Modelo BPMN](../artefatos/processos/Modelo_Geral_Aluguel.PNG "Modelo BPMN do Processo Geral de Aluguel de Automóveis.")
 
 
 ### 3.3.2 Processo 2 – Subprocesso Cadastro/Login do Processo "Aluguel de Automóveis Geral"
 
 Subprocesso responsável pelo cadastro ou login do usuário na plataforma LocaLex Rent Car Point. O usuário informa algumas informações sensíveis ao cadastrar, ou o email e senha, caso já tenha uma conta no sistema.
 
-![Exemplo de um Modelo BPMN](imagens/Subprocesso_Geral_Cadastrar_Login.PNG "Subprocesso do processo Aluguel de Automóveis Geral.")
+![Exemplo de um Modelo BPMN](../artefatos/processos/Subprocesso_Geral_Cadastrar_Login.PNG "Subprocesso do processo Aluguel de Automóveis Geral.")
 
 
 ### 3.3.3 Processo 3 – Processo de Cadastro do Cliente
@@ -99,14 +99,14 @@ Processo que represta o login do cliente no sistema da Localex Rent Car Point. O
 
 Processo que representa as etapas que o cliente terá de passar na escolha de um carro para seguir o fluxo de locação. O usuário deve escolher um carro dentro de cada classe desejada e selecionar o seguro obrigatório. A escolha de seguros extras e acessórios são opcionais ao usuário.
 
-![Exemplo de um Modelo BPMN](processos/ProcessoDeEscolhaDoVeiculo.jpeg "Processo de Escolha de um Carro").
+![Exemplo de um Modelo BPMN](../artefatos/processos/ProcessoDeEscolhaDoVeiculo.jpeg "Processo de Escolha de um Carro").
 
 
 ### 3.3.5 Processo 5 – Processo de Avaliação do Aluguel de Automóveis
 
 Processo responsável por sugerir ao cliente uma avaliação e um comentário do serviço de Locação de Veículo da LocaLex.
 
-![Processo de Avaliação](imagens/Processo_Avaliacao.png "Processo de avaliação do aluguel.")
+![Processo de Avaliação](../artefatos/processos/Processo_Avaliacao.png "Processo de avaliação do aluguel.")
 
 ## 4. Projeto da Solução
 
