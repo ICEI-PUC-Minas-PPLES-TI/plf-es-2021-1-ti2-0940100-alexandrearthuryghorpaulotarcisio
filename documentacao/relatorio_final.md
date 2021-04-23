@@ -201,7 +201,7 @@ Tecnologias: HTML5,CSS3,JavaScript.
 
 Frameworks: Bootstrap.
 
-![Esquema](SchemeTecnologies.png "Esquema das tecnologias")
+![Esquema](imagens/EsquemaTecnologia.jpeg "Esquema das tecnologias")
 
 ## 5. Modelagem de dados
 
