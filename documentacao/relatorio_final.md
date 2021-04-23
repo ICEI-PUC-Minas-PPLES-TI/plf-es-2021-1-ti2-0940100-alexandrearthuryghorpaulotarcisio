@@ -99,7 +99,7 @@ Processo que represta o login do cliente no sistema da Localex Rent Car Point. O
 
 Processo que representa as etapas que o cliente terá de passar na escolha de um carro para seguir o fluxo de locação. O usuário deve escolher um carro dentro de cada classe desejada e selecionar o seguro obrigatório. A escolha de seguros extras e acessórios são opcionais ao usuário.
 
-![Exemplo de um Modelo BPMN](/ProcessoDeEscolhaDoVeiculo.jpeg "Processo de Escolha de um Carro").
+![Exemplo de um Modelo BPMN](imagens/ProcessoDeEscolhaDoVeiculo.jpeg "Processo de Escolha de um Carro").
 
 
 ### 3.3.5 Processo 5 – Processo de Avaliação do Aluguel de Automóveis
