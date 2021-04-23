@@ -75,6 +75,7 @@
     display: flex;
     justify-content: start;
     overflow-x: auto;
+    overflow-y: hidden;
 }
 
 .MAIN__types .card {
@@ -86,16 +87,27 @@
     box-shadow: 1px 2px 2px #363636f2;
     margin-right: 8px;
 }
-
+ 
 .MAIN__types .card img {
     width: 90px;
     height: 120px;
 }
 
 .MAIN__car {
+    border-radius: 20px;
     margin-top: 30px;
+    padding-bottom: 1vh;
+    background-color: #EAE4E4;
+}
+
+.MAIN__car img {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    width: 100%;
 }
 
 .MAIN__car p {
+    width: 80%;
+    margin: auto;
     text-align: center;
 }
