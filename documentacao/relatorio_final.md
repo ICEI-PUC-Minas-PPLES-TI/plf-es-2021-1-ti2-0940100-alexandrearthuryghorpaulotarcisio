@@ -106,7 +106,7 @@ Processo que representa as etapas que o cliente terá de passar na escolha de um
 
 Processo responsável por sugerir ao cliente uma avaliação e um comentário do serviço de Locação de Veículo da LocaLex.
 
-![Processo de Avaliação](../artefatos/processos/Processo_Avaliacao.bpm "Processo de avaliação do aluguel.")
+![Processo de Avaliação](../artefatos/processos/Processo_Avaliacao.png "Processo de avaliação do aluguel.")
 
 ## 4. Projeto da Solução
 
