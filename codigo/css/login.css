@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    padding: 90px;
+    border-radius: 20px;
+    background: rgba(0, 201, 0, 0.5);
+}
+
+.form__links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.form__links p {
+    color: blue;
+}
+
+.form__opt {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form__opt button{
+   background: #00C900;
+   border: none;
+}
+
+.form__msg {
+    text-align: center;
+}

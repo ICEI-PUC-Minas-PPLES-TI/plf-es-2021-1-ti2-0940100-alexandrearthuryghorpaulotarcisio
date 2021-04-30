@@ -1,0 +1,15 @@
+form {
+    padding: 90px;
+    border-radius: 20px;
+    background: rgba(0, 201, 0, 0.5);
+}
+
+#btn-sub{
+    background: #00C900;
+    border: none;
+ }
+
+.submit-link {
+    justify-content: space-between;
+    padding: 3vh;
+}
