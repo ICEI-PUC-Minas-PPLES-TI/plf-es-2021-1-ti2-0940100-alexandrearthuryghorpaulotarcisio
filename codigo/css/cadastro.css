@@ -1,15 +1,28 @@
+body{
+    background-color: rgba(0, 201, 0, 0.5);
+}
+
 form {
-    padding: 90px;
-    border-radius: 20px;
-    background: rgba(0, 201, 0, 0.5);
+    padding: 30px;
 }
 
 #btn-sub{
     background: #00C900;
     border: none;
- }
+}
 
 .submit-link {
     justify-content: space-between;
     padding: 3vh;
+}
+
+.form__msg {
+    margin-top: 80px;
+    text-align: center;
+
+}
+
+#msgSenha, #msgNome, #msgNiver, #msgEmail, #msgCNH, #msgCPF, #msgGender, #msgConfirmarSenha{
+    color: red ;
+    font-weight: bold;
 }
