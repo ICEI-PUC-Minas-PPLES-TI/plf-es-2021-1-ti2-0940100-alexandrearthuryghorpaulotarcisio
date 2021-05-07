@@ -72,7 +72,7 @@
     display: grid;
     grid-template-columns: 20px 1fr 20px;
     column-gap: 10px;
-    grid-template-columns: repeat(8, calc(50% - 40px));
+    grid-template-columns: repeat(8, 90px);
     grid-template-rows: minmax(150px, 1fr);
     overflow-x: auto;
 }
@@ -90,21 +90,10 @@
 }
 
 
-.MAIN__car {
-    border-radius: 20px;
-    margin-top: 30px;
-    padding-bottom: 1vh;
-    background-color: #EAE4E4;
-}
-
-.MAIN__car img {
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
-    width: 100%;
-}
-
-.MAIN__car p {
-    width: 80%;
-    margin: auto;
-    text-align: center;
+@media(min-device-width:1000px) and (max-device-width: 1400px) {
+    .MAIN__result {
+        display: grid;
+        grid-gap: 16px;
+        grid-template-columns: [left] 50% [right] 50%
+    }
 }
