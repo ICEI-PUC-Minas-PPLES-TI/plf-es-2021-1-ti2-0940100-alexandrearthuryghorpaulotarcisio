@@ -1,12 +1,11 @@
-* {
+body {
     margin: 0;
     padding: 0;
+    background: rgba(0, 201, 0, 0.5);
 }
 
 form {
-    padding: 90px;
-    border-radius: 20px;
-    background: rgba(0, 201, 0, 0.5);
+    margin-top: 80px;
 }
 
 .form__links {
@@ -14,16 +13,12 @@ form {
     text-align: center;
 }
 
-.form__links p {
-    color: blue;
-}
-
-.form__opt {
+.submit-link {
     display: flex;
     justify-content: space-between;
 }
 
-.form__opt button{
+.submit-link button{
    background: #00C900;
    border: none;
 }
