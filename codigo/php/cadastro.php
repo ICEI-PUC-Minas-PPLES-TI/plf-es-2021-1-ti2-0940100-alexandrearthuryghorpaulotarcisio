@@ -7,9 +7,9 @@ $cpf = filter_input(INPUT_POST, 'cpf');
 $cnh = filter_input(INPUT_POST, 'cnh');
 $senha = filter_input(INPUT_POST, 'password');
 
-if($gender == 'masculino'){
+if($gender == 'male'){
     $gender = 'M';
-} else if($gender == 'feminino'){
+} else if($gender == 'female'){
     $gender = 'F';
 }
 
@@ -29,4 +29,5 @@ if (!empty($username)){
     header('Location: ../html/login.html');
     exit();
 }
+
 ?>
