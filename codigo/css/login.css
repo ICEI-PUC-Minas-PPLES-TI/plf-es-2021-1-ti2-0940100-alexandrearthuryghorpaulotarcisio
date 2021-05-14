@@ -4,6 +4,13 @@ body {
     background: rgba(0, 201, 0, 0.5);
 }
 
+.gap-3{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 form {
     margin-top: 80px;
 }

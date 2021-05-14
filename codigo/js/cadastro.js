@@ -228,7 +228,5 @@ cadastrar = () =>{
             alert("Preencha os campos corretamente.");
         }
     }
-    
-    
 }
 
