@@ -55,7 +55,7 @@ dataHora=()=>{
         hrRet = posicao[0];
         minRet = posicao[1]; 
 
-        if(diaRet>=dia_atual && mesRet>=mes_atual && anoRet>=ano_atual){
+        if(diaRet==dia_atual && mesRet==mes_atual && anoRet==ano_atual){
             if(hrRet>hr_atual){
                 horaRet=true;
                 horarioRetirada.style.border = 'none';
