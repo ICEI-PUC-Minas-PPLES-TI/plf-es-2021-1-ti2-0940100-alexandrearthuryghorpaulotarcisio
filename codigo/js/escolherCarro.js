@@ -45,7 +45,6 @@ dataHora=()=>{
             dataRet=false;
             dataRetirada.style.border = 'red solid';
         }
-       console.log(dataRet); 
     }
     
     horarioRetirada.onblur=()=>{
@@ -79,7 +78,6 @@ dataHora=()=>{
             horaRet=true;
             horarioRetirada.style.border = 'none';
         }
-        console.log(horaRet);
     }
 
     dataDevolucao.onblur=()=>{
@@ -110,7 +108,6 @@ dataHora=()=>{
             dataDev = false;
             dataDevolucao.style.border = 'red solid';
         }
-        console.log(dataDev);
     }
 
     horarioDevolucao.onblur=()=>{
@@ -137,7 +134,6 @@ dataHora=()=>{
             horaDev=true;
             horarioDevolucao.style.border = 'none';
         }
-       console.log(horaDev); 
     }
 }
 
@@ -146,7 +142,6 @@ proximoEtapa1 =()=>{
     
     btn_ProximoEtapa1.onclick=()=>{
         if(dataRet && horaRet && dataDev && horaDev){
-            console.log('ok');
             categorias();
         }else{
             event.preventDefault(btn_ProximoEtapa1);
@@ -161,23 +156,22 @@ categorias =()=>{
     `
         <div class="container Categoria">
             <div id ="secaoCategoria" class="row">
-                <div class=" col-xs-12 col-sm-6 col-md-4">
-                    <div  class="image-flip" >
-                        <div class=" mainflip flip-0">
-                            <div  class=" frontside">
+            <div id="externo" class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="image-flip" >
+                        <div class="mainflip flip-0">
+                            <div class="frontside">
                                 <div class="card">
                                     <div class="card-body text-center">
-                                        <p><img class=" img-fluid" src="../images/branco-summit-novo-onix.png" alt="card image"></p>
-                                        <h4 class="card-title">Executivo</h4>
-                                        <p class="card-text">Os veículos executivos vem para suprir uma necessidade de maior conforto, segurança e beleza. Bastante espaçosos e oferecem assentos confortáveis em couro. Um carro executivo certamente é garantia de um serviço de primeira qualidade.</p>
-                                        <a id="verMaisExecutivo" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Ver mais</a>
+                                        <p><img class=" img-fluid" src="../images/padronização-tamanho-carros_grupo-am_01-renault-kwid.png" alt="card image"></p>
+                                        <h4 class="card-title">Econômico</h4>
+                                        <p class="card-text">São carros menores, para no máximo 4 pessoas e poucas malas, mas que não decepcionam quando o assunto é desempenho. Carros que não gastam muito mas que satisfazem nossos clientes.</p>
+                                        <a id="verMaisEconomico" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i>Ver mais</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
                 <div class="col-xs-12 col-sm-6 col-md-4">
                     <div class="image-flip" >
                         <div class="mainflip flip-0">
@@ -194,17 +188,16 @@ categorias =()=>{
                         </div>
                     </div>
                 </div>
-            
-                <div id="externo" class="col-xs-12 col-sm-6 col-md-4">
-                    <div class="image-flip" >
-                        <div class="mainflip flip-0">
-                            <div class="frontside">
+                <div class=" col-xs-12 col-sm-6 col-md-4">
+                    <div  class="image-flip" >
+                        <div class=" mainflip flip-0">
+                            <div  class=" frontside">
                                 <div class="card">
                                     <div class="card-body text-center">
-                                        <p><img class=" img-fluid" src="../images/padronização-tamanho-carros_grupo-am_01-renault-kwid.png" alt="card image"></p>
-                                        <h4 class="card-title">Econômico</h4>
-                                        <p class="card-text">São carros menores, para no máximo 4 pessoas e poucas malas, mas que não decepcionam quando o assunto é desempenho. Carros que não gastam muito mas que satisfazem nossos clientes.</p>
-                                        <a id="verMaisEconomico" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i>Ver mais</a>
+                                        <p><img class=" img-fluid" src="../images/branco-summit-novo-onix.png" alt="card image"></p>
+                                        <h4 class="card-title">Executivo</h4>
+                                        <p class="card-text">Os veículos executivos vem para suprir uma necessidade de maior conforto, segurança e beleza. Bastante espaçosos e oferecem assentos confortáveis em couro. Um carro executivo certamente é garantia de um serviço de primeira qualidade.</p>
+                                        <a id="verMaisExecutivo" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Ver mais</a>
                                     </div>
                                 </div>
                             </div>
@@ -233,7 +226,7 @@ verMaisExecutivo=()=>{
                             <img class="img-fluid" id="iconCardCarro" src="../images/Icon/executivo.png" />Executivo
                         </span>
                         <span class="card-notify-year">2018</span>
-                        <img class="img-fluid" src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC011A021001.jpg&width=440&height=262" alt="Alternate Text" />
+                        <img class="img-fluid" src="../images/Civic2021.jpeg" alt="Alternate Text" />
                     </div>
                     <div class=" card-image-overlay ">
                         <div class="row">   
@@ -263,7 +256,95 @@ verMaisExecutivo=()=>{
                     </div>
                     <div class="card-body text-center">
                         <div class="">
-                            <h5>Honda Accord LX</h5>
+                            <h5>Honda Civic</h5>
+                        </div>
+                        <a id="botaoCard" class="btn btn-primary" href="#">Selecionar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="cardCarro" class="col-md-4 col-lg-4">
+                <div class="card rounded">
+                    <div class="card-image">
+                        <span class="card-notify-badge">
+                            <img class="img-fluid" id="iconCardCarro" src="../images/Icon/executivo.png" />Executivo
+                        </span>
+                        <span class="card-notify-year">2018</span>
+                        <img class="img-fluid" src="../images/Corolla2021.png" alt="Alternate Text" />
+                    </div>
+                    <div class=" card-image-overlay ">
+                        <div class="row">   
+                            <div id="secaoCardCarro" class="col-md-6 col-sm-12">
+                                <img id="iconCardCarro" src="../images/Icon/cambio.png" />
+                                <span class="card-detail-badge">Transmissão Automática</span>
+                            </div>
+                            <div id="secaoCardCarro" class="col-md-6">
+                                <img class="img-fluid" id="iconCardCarro" src="../images/Icon/porta.png" />
+                                <span class="card-detail-badge "> 5 Portas</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div id="secaoCardCarro" class="col-md-6">
+                                <img id="iconCardCarro" src="../images/Icon/capacidade.png" />
+                                <span class="card-detail-badge">5 pessoas</span>
+                            </div>
+                            <div id="secaoCardCarro" class="col-md-6" >
+                                <img id="iconCardCarro" src="../images/Icon/airbag.png" />
+                                <span class="card-detail-badge">Air bag</span>
+                            </div>
+                        </div>
+                        <div id="secaoCardCarro" >
+                            <img id="iconCardCarro" src="../images/Icon/ar.png" />
+                            <span class="card-detail-badge">Ar condicionado</span>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="">
+                            <h5>Corolla</h5>
+                        </div>
+                        <a id="botaoCard" class="btn btn-primary" href="#">Selecionar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="cardCarro" class="col-md-4 col-lg-4">
+                <div class="card rounded">
+                    <div class="card-image">
+                        <span class="card-notify-badge">
+                            <img class="img-fluid" id="iconCardCarro" src="../images/Icon/executivo.png" />Executivo
+                        </span>
+                        <span class="card-notify-year">2018</span>
+                        <img class="img-fluid" src="../images/Bravo2021.jpg" alt="Alternate Text" />
+                    </div>
+                    <div class=" card-image-overlay ">
+                        <div class="row">   
+                            <div id="secaoCardCarro" class="col-md-6 col-sm-12">
+                                <img id="iconCardCarro" src="../images/Icon/cambio.png" />
+                                <span class="card-detail-badge">Transmissão Automática</span>
+                            </div>
+                            <div id="secaoCardCarro" class="col-md-6">
+                                <img class="img-fluid" id="iconCardCarro" src="../images/Icon/porta.png" />
+                                <span class="card-detail-badge "> 5 Portas</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div id="secaoCardCarro" class="col-md-6">
+                                <img id="iconCardCarro" src="../images/Icon/capacidade.png" />
+                                <span class="card-detail-badge">5 pessoas</span>
+                            </div>
+                            <div id="secaoCardCarro" class="col-md-6" >
+                                <img id="iconCardCarro" src="../images/Icon/airbag.png" />
+                                <span class="card-detail-badge">Air bag</span>
+                            </div>
+                        </div>
+                        <div id="secaoCardCarro" >
+                            <img id="iconCardCarro" src="../images/Icon/ar.png" />
+                            <span class="card-detail-badge">Ar condicionado</span>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="">
+                            <h5>Bravo</h5>
                         </div>
                         <a id="botaoCard" class="btn btn-primary" href="#">Selecionar</a>
                     </div>
@@ -289,7 +370,7 @@ verMaisIntermediario=()=>{
                             <img class="img-fluid" id="iconCardCarro" src="../images/Icon/intermediario.png" />Intermediário
                         </span>
                         <span class="card-notify-year">2018</span>
-                        <img class="img-fluid" src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC011A021001.jpg&width=440&height=262" alt="Alternate Text" />
+                        <img class="img-fluid" src="../images/Ecosport2021.jpg" alt="Alternate Text" />
                     </div>
                     <div class="card-image-overlay">
                         <div class="row">
@@ -319,7 +400,93 @@ verMaisIntermediario=()=>{
                     </div>
                     <div class="card-body text-center">
                         <div class="">
-                            <h5>Honda Accord LX</h5>
+                            <h5>Ecosport</h5>
+                        </div>
+                        <a id="botaoCard" class="btn btn-primary" href="#">Selecionar</a>
+                    </div>
+                </div>
+            </div>
+            <div id="cardCarro" class="col-md-4 col-lg-4">
+                <div class="card rounded">
+                    <div class="card-image">
+                        <span class="card-notify-badge">
+                            <img class="img-fluid" id="iconCardCarro" src="../images/Icon/intermediario.png" />Intermediário
+                        </span>
+                        <span class="card-notify-year">2018</span>
+                        <img class="img-fluid" src="../images/RenaultKwid2021.jpg" alt="Alternate Text" />
+                    </div>
+                    <div class="card-image-overlay">
+                        <div class="row">
+                            <div id="secaoCardCarro" class="col-md-6">
+                                <img id="iconCardCarro" src="../images/Icon/cambio.png" />
+                            <span class="card-detail-badge">Transmissão Manual</span>
+                            </div>
+                            <div id="secaoCardCarro" class="col-md-6">
+                                <img class="img-fluid" id="iconCardCarro" src="../images/Icon/porta.png" />
+                                <span class="card-detail-badge "> 5 Portas</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div id="secaoCardCarro" class="col-md-6">
+                                <img id="iconCardCarro" src="../images/Icon/capacidade.png" />
+                                <span class="card-detail-badge">5 pessoas</span>
+                            </div>
+                            <div id="secaoCardCarro" class="col-md-6" >
+                                <img id="iconCardCarro" src="../images/Icon/airbag.png" />
+                                <span class="card-detail-badge">Air bag</span>
+                            </div>
+                        </div>
+                        <div id="secaoCardCarro">
+                            <img id="iconCardCarro" src="../images/Icon/ar.png" />
+                            <span class="card-detail-badge">Ar condicionado</span>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="">
+                            <h5>Renault Kwid</h5>
+                        </div>
+                        <a id="botaoCard" class="btn btn-primary" href="#">Selecionar</a>
+                    </div>
+                </div>
+            </div>
+            <div id="cardCarro" class="col-md-4 col-lg-4">
+                <div class="card rounded">
+                    <div class="card-image">
+                        <span class="card-notify-badge">
+                            <img class="img-fluid" id="iconCardCarro" src="../images/Icon/intermediario.png" />Intermediário
+                        </span>
+                        <span class="card-notify-year">2018</span>
+                        <img class="img-fluid" src="../images/GrandSiena2021.jpg" alt="Alternate Text" />
+                    </div>
+                    <div class="card-image-overlay">
+                        <div class="row">
+                            <div id="secaoCardCarro" class="col-md-6">
+                                <img id="iconCardCarro" src="../images/Icon/cambio.png" />
+                            <span class="card-detail-badge">Transmissão Automática</span>
+                            </div>
+                            <div id="secaoCardCarro" class="col-md-6">
+                                <img class="img-fluid" id="iconCardCarro" src="../images/Icon/porta.png" />
+                                <span class="card-detail-badge "> 5 Portas</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div id="secaoCardCarro" class="col-md-6">
+                                <img id="iconCardCarro" src="../images/Icon/capacidade.png" />
+                                <span class="card-detail-badge">5 pessoas</span>
+                            </div>
+                            <div id="secaoCardCarro" class="col-md-6" >
+                                <img id="iconCardCarro" src="../images/Icon/airbag.png" />
+                                <span class="card-detail-badge">Air bag</span>
+                            </div>
+                        </div>
+                        <div id="secaoCardCarro">
+                            <img id="iconCardCarro" src="../images/Icon/ar.png" />
+                            <span class="card-detail-badge">Ar condicionado</span>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="">
+                            <h5>Grand Siena</h5>
                         </div>
                         <a id="botaoCard" class="btn btn-primary" href="#">Selecionar</a>
                     </div>
@@ -345,7 +512,7 @@ verMaisEconomico=()=>{
                             <img class="img-fluid" id="iconCardCarro" src="../images/Icon/economico.png" />Econômico
                         </span>
                         <span class="card-notify-year">2018</span>
-                        <img class="img-fluid" src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC011A021001.jpg&width=440&height=262" alt="Alternate Text" />
+                        <img class="img-fluid" src="../images/Uno2021.jpg" alt="Alternate Text" />
                     </div>
                     <div class="card-image-overlay ">
                         <div class="row">
@@ -375,7 +542,93 @@ verMaisEconomico=()=>{
                     </div>
                     <div class="card-body text-center">
                         <div class="">
-                            <h5>Honda Accord LX</h5>
+                            <h5>Uno</h5>
+                        </div>
+                        <a id="botaoCard" class="btn btn-primary" href="#">Selecionar</a>
+                    </div>
+                </div>
+            </div>
+            <div id="cardCarro" class="col-lg-4 col-md-4   ">
+                <div class="card rounded">
+                    <div class="card-image">
+                        <span class="card-notify-badge">
+                            <img class="img-fluid" id="iconCardCarro" src="../images/Icon/economico.png" />Econômico
+                        </span>
+                        <span class="card-notify-year">2018</span>
+                        <img class="img-fluid" src="../images/Palio2021.jpeg" alt="Alternate Text" />
+                    </div>
+                    <div class="card-image-overlay ">
+                        <div class="row">
+                            <div id="secaoCardCarro" class="col-md-6 col-sm-12">
+                                <img id="iconCardCarro" src="../images/Icon/cambio.png" />
+                                <span class="card-detail-badge">Transmissão Manual</span>
+                            </div>
+                            <div id="secaoCardCarro" class="col-md-6">
+                                <img class="img-fluid" id="iconCardCarro" src="../images/Icon/porta.png" />
+                                <span class="card-detail-badge "> 5 Portas</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div id="secaoCardCarro" class="col-md-6">
+                                <img id="iconCardCarro" src="../images/Icon/capacidade.png" />
+                                <span class="card-detail-badge">5 pessoas</span>
+                            </div>
+                            <div id="secaoCardCarro" class="col-md-6" >
+                                <img id="iconCardCarro" src="../images/Icon/airbag.png" />
+                                <span class="card-detail-badge">Air bag</span>
+                            </div>
+                        </div>
+                        <div id="secaoCardCarro">
+                            <img id="iconCardCarro" src="../images/Icon/ar.png" />
+                            <span class="card-detail-badge">Ar condicionado</span>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="">
+                            <h5>Palio</h5>
+                        </div>
+                        <a id="botaoCard" class="btn btn-primary" href="#">Selecionar</a>
+                    </div>
+                </div>
+            </div>
+            <div id="cardCarro" class="col-lg-4 col-md-4   ">
+                <div class="card rounded">
+                    <div class="card-image">
+                        <span class="card-notify-badge">
+                            <img class="img-fluid" id="iconCardCarro" src="../images/Icon/economico.png" />Econômico
+                        </span>
+                        <span class="card-notify-year">2018</span>
+                        <img class="img-fluid" src="../images/Up2021.jpg" alt="Alternate Text" />
+                    </div>
+                    <div class="card-image-overlay ">
+                        <div class="row">
+                            <div id="secaoCardCarro" class="col-md-6 col-sm-12">
+                                <img id="iconCardCarro" src="../images/Icon/cambio.png" />
+                                <span class="card-detail-badge">Transmissão Automática</span>
+                            </div>
+                            <div id="secaoCardCarro" class="col-md-6">
+                                <img class="img-fluid" id="iconCardCarro" src="../images/Icon/porta.png" />
+                                <span class="card-detail-badge "> 5 Portas</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div id="secaoCardCarro" class="col-md-6">
+                                <img id="iconCardCarro" src="../images/Icon/capacidade.png" />
+                                <span class="card-detail-badge">5 pessoas</span>
+                            </div>
+                            <div id="secaoCardCarro" class="col-md-6" >
+                                <img id="iconCardCarro" src="../images/Icon/airbag.png" />
+                                <span class="card-detail-badge">Air bag</span>
+                            </div>
+                        </div>
+                        <div id="secaoCardCarro">
+                            <img id="iconCardCarro" src="../images/Icon/ar.png" />
+                            <span class="card-detail-badge">Ar condicionado</span>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="">
+                            <h5>Up</h5>
                         </div>
                         <a id="botaoCard" class="btn btn-primary" href="#">Selecionar</a>
                     </div>
