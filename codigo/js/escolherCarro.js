@@ -215,427 +215,182 @@ categorias =()=>{
 verMaisExecutivo=()=>{
     let verMaisExecutivo = document.getElementById('verMaisExecutivo');
     verMaisExecutivo.onclick=()=>{
-        let MAIN = document.getElementById('MAIN');
-        MAIN.innerHTML = 
-        `
-        <div class="row" id="ads">
-            <div id="cardCarro" class="col-md-4 col-lg-4">
-                <div class="card rounded">
-                    <div class="card-image">
-                        <span class="card-notify-badge">
-                            <img class="img-fluid" id="iconCardCarro" src="../images/Icon/executivo.png" />Executivo
-                        </span>
-                        <span class="card-notify-year">2018</span>
-                        <img class="img-fluid" src="../images/Civic2021.jpeg" alt="Alternate Text" />
-                    </div>
-                    <div class=" card-image-overlay ">
-                        <div class="row">   
-                            <div id="secaoCardCarro" class="col-md-6 col-sm-12">
-                                <img id="iconCardCarro" src="../images/Icon/cambio.png" />
-                                <span class="card-detail-badge">Transmissão Manual</span>
-                            </div>
-                            <div id="secaoCardCarro" class="col-md-6">
-                                <img class="img-fluid" id="iconCardCarro" src="../images/Icon/porta.png" />
-                                <span class="card-detail-badge "> 5 Portas</span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div id="secaoCardCarro" class="col-md-6">
-                                <img id="iconCardCarro" src="../images/Icon/capacidade.png" />
-                                <span class="card-detail-badge">5 pessoas</span>
-                            </div>
-                            <div id="secaoCardCarro" class="col-md-6" >
-                                <img id="iconCardCarro" src="../images/Icon/airbag.png" />
-                                <span class="card-detail-badge">Air bag</span>
-                            </div>
-                        </div>
-                        <div id="secaoCardCarro" >
-                            <img id="iconCardCarro" src="../images/Icon/ar.png" />
-                            <span class="card-detail-badge">Ar condicionado</span>
-                        </div>
-                    </div>
-                    <div class="card-body text-center">
-                        <div class="">
-                            <h5>Honda Civic</h5>
-                        </div>
-                        <a id="botaoCard" class="btn btn-primary" href="#">Selecionar</a>
-                    </div>
-                </div>
-            </div>
-
-            <div id="cardCarro" class="col-md-4 col-lg-4">
-                <div class="card rounded">
-                    <div class="card-image">
-                        <span class="card-notify-badge">
-                            <img class="img-fluid" id="iconCardCarro" src="../images/Icon/executivo.png" />Executivo
-                        </span>
-                        <span class="card-notify-year">2018</span>
-                        <img class="img-fluid" src="../images/Corolla2021.png" alt="Alternate Text" />
-                    </div>
-                    <div class=" card-image-overlay ">
-                        <div class="row">   
-                            <div id="secaoCardCarro" class="col-md-6 col-sm-12">
-                                <img id="iconCardCarro" src="../images/Icon/cambio.png" />
-                                <span class="card-detail-badge">Transmissão Automática</span>
-                            </div>
-                            <div id="secaoCardCarro" class="col-md-6">
-                                <img class="img-fluid" id="iconCardCarro" src="../images/Icon/porta.png" />
-                                <span class="card-detail-badge "> 5 Portas</span>
+        var texto = "";
+        $.ajax({
+            url: '../php/escolherCarroLuxo.php',
+            type: 'GET',
+            dataType: 'json'
+            }).done(function(result){
+                for(var i=0; i<result.length; i++){
+                    texto +=`<div class="row" id="ads">
+                        <div id="cardCarro" class="col-md-4 col-lg-4">
+                            <div class="card rounded">
+                                <div class="card-image">
+                                    <span class="card-notify-badge">
+                                        <img class="img-fluid" id="iconCardCarro" src="../images/Icon/executivo.png" />Executivo
+                                    </span>
+                                    <span class="card-notify-year">${result[i].ano}</span>
+                                    <img class="img-fluid" src=${result[i].urlimagem} alt="Alternate Text" />
+                                </div>
+                                <div class=" card-image-overlay ">
+                                    <div class="row">   
+                                        <div id="secaoCardCarro" class="col-md-6 col-sm-12">
+                                            <img id="iconCardCarro" src="../images/Icon/cambio.png" />
+                                            <span class="card-detail-badge">Transmissão ${result[i].cambio}</span>
+                                        </div>
+                                        <div id="secaoCardCarro" class="col-md-6">
+                                            <img class="img-fluid" id="iconCardCarro" src="../images/Icon/porta.png" />
+                                            <span class="card-detail-badge "> 5 Portas</span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div id="secaoCardCarro" class="col-md-6">
+                                            <img id="iconCardCarro" src="../images/Icon/capacidade.png" />
+                                            <span class="card-detail-badge">${result[i].capacidade} pessoas</span>
+                                        </div>
+                                        <div id="secaoCardCarro" class="col-md-6" >
+                                            <img id="iconCardCarro" src="../images/Icon/airbag.png" />
+                                            <span class="card-detail-badge">Air bag</span>
+                                        </div>
+                                    </div>
+                                    <div id="secaoCardCarro" >
+                                        <img id="iconCardCarro" src="../images/Icon/ar.png" />
+                                        <span class="card-detail-badge">Ar condicionado</span>
+                                    </div>
+                                </div>
+                                <div class="card-body text-center">
+                                    <div class="">
+                                        <h5>${result[i].modelo}</h5>
+                                    </div>
+                                    <a id="botaoCard" class="btn btn-primary" href="#">Selecionar</a>
+                                </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div id="secaoCardCarro" class="col-md-6">
-                                <img id="iconCardCarro" src="../images/Icon/capacidade.png" />
-                                <span class="card-detail-badge">5 pessoas</span>
-                            </div>
-                            <div id="secaoCardCarro" class="col-md-6" >
-                                <img id="iconCardCarro" src="../images/Icon/airbag.png" />
-                                <span class="card-detail-badge">Air bag</span>
-                            </div>
-                        </div>
-                        <div id="secaoCardCarro" >
-                            <img id="iconCardCarro" src="../images/Icon/ar.png" />
-                            <span class="card-detail-badge">Ar condicionado</span>
-                        </div>
-                    </div>
-                    <div class="card-body text-center">
-                        <div class="">
-                            <h5>Corolla</h5>
-                        </div>
-                        <a id="botaoCard" class="btn btn-primary" href="#">Selecionar</a>
-                    </div>
-                </div>
-            </div>
-
-            <div id="cardCarro" class="col-md-4 col-lg-4">
-                <div class="card rounded">
-                    <div class="card-image">
-                        <span class="card-notify-badge">
-                            <img class="img-fluid" id="iconCardCarro" src="../images/Icon/executivo.png" />Executivo
-                        </span>
-                        <span class="card-notify-year">2018</span>
-                        <img class="img-fluid" src="../images/Bravo2021.jpg" alt="Alternate Text" />
-                    </div>
-                    <div class=" card-image-overlay ">
-                        <div class="row">   
-                            <div id="secaoCardCarro" class="col-md-6 col-sm-12">
-                                <img id="iconCardCarro" src="../images/Icon/cambio.png" />
-                                <span class="card-detail-badge">Transmissão Automática</span>
-                            </div>
-                            <div id="secaoCardCarro" class="col-md-6">
-                                <img class="img-fluid" id="iconCardCarro" src="../images/Icon/porta.png" />
-                                <span class="card-detail-badge "> 5 Portas</span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div id="secaoCardCarro" class="col-md-6">
-                                <img id="iconCardCarro" src="../images/Icon/capacidade.png" />
-                                <span class="card-detail-badge">5 pessoas</span>
-                            </div>
-                            <div id="secaoCardCarro" class="col-md-6" >
-                                <img id="iconCardCarro" src="../images/Icon/airbag.png" />
-                                <span class="card-detail-badge">Air bag</span>
-                            </div>
-                        </div>
-                        <div id="secaoCardCarro" >
-                            <img id="iconCardCarro" src="../images/Icon/ar.png" />
-                            <span class="card-detail-badge">Ar condicionado</span>
-                        </div>
-                    </div>
-                    <div class="card-body text-center">
-                        <div class="">
-                            <h5>Bravo</h5>
-                        </div>
-                        <a id="botaoCard" class="btn btn-primary" href="#">Selecionar</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        `;
+                    </div>`;
+                }
+                $('#MAIN').html(texto);
+            });
     }
 }
 
 verMaisIntermediario=()=>{
     let verMaisIntermediario = document.getElementById('verMaisIntermediario');
     verMaisIntermediario.onclick=()=>{
-        let MAIN = document.getElementById('MAIN');
-        MAIN.innerHTML = 
-        `
-        <div class="row" id="ads">
-            <div id="cardCarro" class="col-md-4 col-lg-4">
-                <div class="card rounded">
-                    <div class="card-image">
-                        <span class="card-notify-badge">
-                            <img class="img-fluid" id="iconCardCarro" src="../images/Icon/intermediario.png" />Intermediário
-                        </span>
-                        <span class="card-notify-year">2018</span>
-                        <img class="img-fluid" src="../images/Ecosport2021.jpg" alt="Alternate Text" />
-                    </div>
-                    <div class="card-image-overlay">
-                        <div class="row">
-                            <div id="secaoCardCarro" class="col-md-6">
-                                <img id="iconCardCarro" src="../images/Icon/cambio.png" />
-                            <span class="card-detail-badge">Transmissão Manual</span>
-                            </div>
-                            <div id="secaoCardCarro" class="col-md-6">
-                                <img class="img-fluid" id="iconCardCarro" src="../images/Icon/porta.png" />
-                                <span class="card-detail-badge "> 5 Portas</span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div id="secaoCardCarro" class="col-md-6">
-                                <img id="iconCardCarro" src="../images/Icon/capacidade.png" />
-                                <span class="card-detail-badge">5 pessoas</span>
-                            </div>
-                            <div id="secaoCardCarro" class="col-md-6" >
-                                <img id="iconCardCarro" src="../images/Icon/airbag.png" />
-                                <span class="card-detail-badge">Air bag</span>
-                            </div>
-                        </div>
-                        <div id="secaoCardCarro">
-                            <img id="iconCardCarro" src="../images/Icon/ar.png" />
-                            <span class="card-detail-badge">Ar condicionado</span>
-                        </div>
-                    </div>
-                    <div class="card-body text-center">
-                        <div class="">
-                            <h5>Ecosport</h5>
-                        </div>
-                        <a id="botaoCard" class="btn btn-primary" href="#">Selecionar</a>
-                    </div>
-                </div>
-            </div>
-            <div id="cardCarro" class="col-md-4 col-lg-4">
-                <div class="card rounded">
-                    <div class="card-image">
-                        <span class="card-notify-badge">
-                            <img class="img-fluid" id="iconCardCarro" src="../images/Icon/intermediario.png" />Intermediário
-                        </span>
-                        <span class="card-notify-year">2018</span>
-                        <img class="img-fluid" src="../images/RenaultKwid2021.jpg" alt="Alternate Text" />
-                    </div>
-                    <div class="card-image-overlay">
-                        <div class="row">
-                            <div id="secaoCardCarro" class="col-md-6">
-                                <img id="iconCardCarro" src="../images/Icon/cambio.png" />
-                            <span class="card-detail-badge">Transmissão Manual</span>
-                            </div>
-                            <div id="secaoCardCarro" class="col-md-6">
-                                <img class="img-fluid" id="iconCardCarro" src="../images/Icon/porta.png" />
-                                <span class="card-detail-badge "> 5 Portas</span>
+        var texto = "";
+        $.ajax({
+            url: '../php/escolherCarroIntermediario.php',
+            type: 'GET',
+            dataType: 'json'
+            }).done(function(result){
+                for(var i=0; i<result.length; i++){
+                    texto+= `<div class="row" id="ads">
+                        <div id="cardCarro" class="col-md-4 col-lg-4">
+                            <div class="card rounded">
+                                <div class="card-image">
+                                    <span class="card-notify-badge">
+                                        <img class="img-fluid" id="iconCardCarro" src="../images/Icon/intermediario.png" />Intermediário
+                                    </span>
+                                    <span class="card-notify-year">${result[i].ano}</span>
+                                    <img class="img-fluid" src=${result[i].urlimagem} alt="Alternate Text" />
+                                </div>
+                                <div class="card-image-overlay">
+                                    <div class="row">
+                                        <div id="secaoCardCarro" class="col-md-6">
+                                            <img id="iconCardCarro" src="../images/Icon/cambio.png" />
+                                        <span class="card-detail-badge">Transmissão ${result[i].cambio}</span>
+                                        </div>
+                                        <div id="secaoCardCarro" class="col-md-6">
+                                            <img class="img-fluid" id="iconCardCarro" src="../images/Icon/porta.png" />
+                                            <span class="card-detail-badge "> 5 Portas</span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div id="secaoCardCarro" class="col-md-6">
+                                            <img id="iconCardCarro" src="../images/Icon/capacidade.png" />
+                                            <span class="card-detail-badge">${result[i].capacidade} pessoas</span>
+                                        </div>
+                                        <div id="secaoCardCarro" class="col-md-6" >
+                                            <img id="iconCardCarro" src="../images/Icon/airbag.png" />
+                                            <span class="card-detail-badge">Air bag</span>
+                                        </div>
+                                    </div>
+                                    <div id="secaoCardCarro">
+                                        <img id="iconCardCarro" src="../images/Icon/ar.png" />
+                                        <span class="card-detail-badge">Ar condicionado</span>
+                                    </div>
+                                </div>
+                                <div class="card-body text-center">
+                                    <div class="">
+                                        <h5>${result[i].modelo}</h5>
+                                    </div>
+                                    <a id="botaoCard" class="btn btn-primary" href="#">Selecionar</a>
+                                </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div id="secaoCardCarro" class="col-md-6">
-                                <img id="iconCardCarro" src="../images/Icon/capacidade.png" />
-                                <span class="card-detail-badge">5 pessoas</span>
-                            </div>
-                            <div id="secaoCardCarro" class="col-md-6" >
-                                <img id="iconCardCarro" src="../images/Icon/airbag.png" />
-                                <span class="card-detail-badge">Air bag</span>
-                            </div>
-                        </div>
-                        <div id="secaoCardCarro">
-                            <img id="iconCardCarro" src="../images/Icon/ar.png" />
-                            <span class="card-detail-badge">Ar condicionado</span>
-                        </div>
-                    </div>
-                    <div class="card-body text-center">
-                        <div class="">
-                            <h5>Renault Kwid</h5>
-                        </div>
-                        <a id="botaoCard" class="btn btn-primary" href="#">Selecionar</a>
-                    </div>
-                </div>
-            </div>
-            <div id="cardCarro" class="col-md-4 col-lg-4">
-                <div class="card rounded">
-                    <div class="card-image">
-                        <span class="card-notify-badge">
-                            <img class="img-fluid" id="iconCardCarro" src="../images/Icon/intermediario.png" />Intermediário
-                        </span>
-                        <span class="card-notify-year">2018</span>
-                        <img class="img-fluid" src="../images/GrandSiena2021.jpg" alt="Alternate Text" />
-                    </div>
-                    <div class="card-image-overlay">
-                        <div class="row">
-                            <div id="secaoCardCarro" class="col-md-6">
-                                <img id="iconCardCarro" src="../images/Icon/cambio.png" />
-                            <span class="card-detail-badge">Transmissão Automática</span>
-                            </div>
-                            <div id="secaoCardCarro" class="col-md-6">
-                                <img class="img-fluid" id="iconCardCarro" src="../images/Icon/porta.png" />
-                                <span class="card-detail-badge "> 5 Portas</span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div id="secaoCardCarro" class="col-md-6">
-                                <img id="iconCardCarro" src="../images/Icon/capacidade.png" />
-                                <span class="card-detail-badge">5 pessoas</span>
-                            </div>
-                            <div id="secaoCardCarro" class="col-md-6" >
-                                <img id="iconCardCarro" src="../images/Icon/airbag.png" />
-                                <span class="card-detail-badge">Air bag</span>
-                            </div>
-                        </div>
-                        <div id="secaoCardCarro">
-                            <img id="iconCardCarro" src="../images/Icon/ar.png" />
-                            <span class="card-detail-badge">Ar condicionado</span>
-                        </div>
-                    </div>
-                    <div class="card-body text-center">
-                        <div class="">
-                            <h5>Grand Siena</h5>
-                        </div>
-                        <a id="botaoCard" class="btn btn-primary" href="#">Selecionar</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        `;
+                        
+                    </div>`;
+                }
+                $('#MAIN').html(texto);
+            });
     }
 }
 
 verMaisEconomico=()=>{
     let verMaisEconomico = document.getElementById('verMaisEconomico');
     verMaisEconomico.onclick=()=>{
-        let MAIN = document.getElementById('MAIN');
-        MAIN.innerHTML = 
-        `
-        <div class="row" id="ads">
-            <div id="cardCarro" class="col-lg-4 col-md-4   ">
-                <div class="card rounded">
-                    <div class="card-image">
-                        <span class="card-notify-badge">
-                            <img class="img-fluid" id="iconCardCarro" src="../images/Icon/economico.png" />Econômico
-                        </span>
-                        <span class="card-notify-year">2018</span>
-                        <img class="img-fluid" src="../images/Uno2021.jpg" alt="Alternate Text" />
-                    </div>
-                    <div class="card-image-overlay ">
-                        <div class="row">
-                            <div id="secaoCardCarro" class="col-md-6 col-sm-12">
-                                <img id="iconCardCarro" src="../images/Icon/cambio.png" />
-                                <span class="card-detail-badge">Transmissão Manual</span>
+        var texto = "";
+        $.ajax({
+            url: '../php/escolherCarroEconomico.php',
+            type: 'GET',
+            dataType: 'json'
+            }).done(function(result){
+                for(var i=0; i<result.length; i++){
+                        texto+=`<div class="row" id="ads">
+                    <div id="cardCarro" class="col-lg-4 col-md-4   ">
+                        <div class="card rounded">
+                            <div class="card-image">
+                                <span class="card-notify-badge">
+                                    <img class="img-fluid" id="iconCardCarro" src="../images/Icon/economico.png" />Econômico
+                                </span>
+                                <span class="card-notify-year">${result[i].ano}</span>
+                                <img class="img-fluid" src=${result[i].urlimagem} alt="Alternate Text" />
                             </div>
-                            <div id="secaoCardCarro" class="col-md-6">
-                                <img class="img-fluid" id="iconCardCarro" src="../images/Icon/porta.png" />
-                                <span class="card-detail-badge "> 5 Portas</span>
+                            <div class="card-image-overlay ">
+                                <div class="row">
+                                    <div id="secaoCardCarro" class="col-md-6 col-sm-12">
+                                        <img id="iconCardCarro" src="../images/Icon/cambio.png" />
+                                        <span class="card-detail-badge">Transmissão ${result[i].cambio}</span>
+                                    </div>
+                                    <div id="secaoCardCarro" class="col-md-6">
+                                        <img class="img-fluid" id="iconCardCarro" src="../images/Icon/porta.png" />
+                                        <span class="card-detail-badge "> 5 Portas</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div id="secaoCardCarro" class="col-md-6">
+                                        <img id="iconCardCarro" src="../images/Icon/capacidade.png" />
+                                        <span class="card-detail-badge">${result[i].capacidade} pessoas</span>
+                                    </div>
+                                    <div id="secaoCardCarro" class="col-md-6" >
+                                        <img id="iconCardCarro" src="../images/Icon/airbag.png" />
+                                        <span class="card-detail-badge">Air bag</span>
+                                    </div>
+                                </div>
+                                <div id="secaoCardCarro">
+                                    <img id="iconCardCarro" src="../images/Icon/ar.png" />
+                                    <span class="card-detail-badge">Ar condicionado</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div id="secaoCardCarro" class="col-md-6">
-                                <img id="iconCardCarro" src="../images/Icon/capacidade.png" />
-                                <span class="card-detail-badge">5 pessoas</span>
-                            </div>
-                            <div id="secaoCardCarro" class="col-md-6" >
-                                <img id="iconCardCarro" src="../images/Icon/airbag.png" />
-                                <span class="card-detail-badge">Air bag</span>
-                            </div>
-                        </div>
-                        <div id="secaoCardCarro">
-                            <img id="iconCardCarro" src="../images/Icon/ar.png" />
-                            <span class="card-detail-badge">Ar condicionado</span>
-                        </div>
-                    </div>
-                    <div class="card-body text-center">
-                        <div class="">
-                            <h5>Uno</h5>
-                        </div>
-                        <a id="botaoCard" class="btn btn-primary" href="#">Selecionar</a>
-                    </div>
-                </div>
-            </div>
-            <div id="cardCarro" class="col-lg-4 col-md-4   ">
-                <div class="card rounded">
-                    <div class="card-image">
-                        <span class="card-notify-badge">
-                            <img class="img-fluid" id="iconCardCarro" src="../images/Icon/economico.png" />Econômico
-                        </span>
-                        <span class="card-notify-year">2018</span>
-                        <img class="img-fluid" src="../images/Palio2021.jpeg" alt="Alternate Text" />
-                    </div>
-                    <div class="card-image-overlay ">
-                        <div class="row">
-                            <div id="secaoCardCarro" class="col-md-6 col-sm-12">
-                                <img id="iconCardCarro" src="../images/Icon/cambio.png" />
-                                <span class="card-detail-badge">Transmissão Manual</span>
-                            </div>
-                            <div id="secaoCardCarro" class="col-md-6">
-                                <img class="img-fluid" id="iconCardCarro" src="../images/Icon/porta.png" />
-                                <span class="card-detail-badge "> 5 Portas</span>
+                            <div class="card-body text-center">
+                                <div class="">
+                                    <h5>${result[i].modelo}</h5>
+                                </div>
+                                <a id="botaoCard" class="btn btn-primary" href="#">Selecionar</a>
                             </div>
                         </div>
-                        <div class="row">
-                            <div id="secaoCardCarro" class="col-md-6">
-                                <img id="iconCardCarro" src="../images/Icon/capacidade.png" />
-                                <span class="card-detail-badge">5 pessoas</span>
-                            </div>
-                            <div id="secaoCardCarro" class="col-md-6" >
-                                <img id="iconCardCarro" src="../images/Icon/airbag.png" />
-                                <span class="card-detail-badge">Air bag</span>
-                            </div>
-                        </div>
-                        <div id="secaoCardCarro">
-                            <img id="iconCardCarro" src="../images/Icon/ar.png" />
-                            <span class="card-detail-badge">Ar condicionado</span>
-                        </div>
-                    </div>
-                    <div class="card-body text-center">
-                        <div class="">
-                            <h5>Palio</h5>
-                        </div>
-                        <a id="botaoCard" class="btn btn-primary" href="#">Selecionar</a>
-                    </div>
-                </div>
-            </div>
-            <div id="cardCarro" class="col-lg-4 col-md-4   ">
-                <div class="card rounded">
-                    <div class="card-image">
-                        <span class="card-notify-badge">
-                            <img class="img-fluid" id="iconCardCarro" src="../images/Icon/economico.png" />Econômico
-                        </span>
-                        <span class="card-notify-year">2018</span>
-                        <img class="img-fluid" src="../images/Up2021.jpg" alt="Alternate Text" />
-                    </div>
-                    <div class="card-image-overlay ">
-                        <div class="row">
-                            <div id="secaoCardCarro" class="col-md-6 col-sm-12">
-                                <img id="iconCardCarro" src="../images/Icon/cambio.png" />
-                                <span class="card-detail-badge">Transmissão Automática</span>
-                            </div>
-                            <div id="secaoCardCarro" class="col-md-6">
-                                <img class="img-fluid" id="iconCardCarro" src="../images/Icon/porta.png" />
-                                <span class="card-detail-badge "> 5 Portas</span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div id="secaoCardCarro" class="col-md-6">
-                                <img id="iconCardCarro" src="../images/Icon/capacidade.png" />
-                                <span class="card-detail-badge">5 pessoas</span>
-                            </div>
-                            <div id="secaoCardCarro" class="col-md-6" >
-                                <img id="iconCardCarro" src="../images/Icon/airbag.png" />
-                                <span class="card-detail-badge">Air bag</span>
-                            </div>
-                        </div>
-                        <div id="secaoCardCarro">
-                            <img id="iconCardCarro" src="../images/Icon/ar.png" />
-                            <span class="card-detail-badge">Ar condicionado</span>
-                        </div>
-                    </div>
-                    <div class="card-body text-center">
-                        <div class="">
-                            <h5>Up</h5>
-                        </div>
-                        <a id="botaoCard" class="btn btn-primary" href="#">Selecionar</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        `;
+                    </div>`;
+                }
+                $('#MAIN').html(texto);
+            });
     }
 }
