@@ -6,8 +6,12 @@
     font-family: 'Comfortaa';
 }
 
+body {
+    background-color: #EDF2F4;
+}
+
 .header {
-    background-color: rgba(0, 201, 0, 0.5);
+    background-color: white;
 }
 
 .user__menu {
@@ -31,16 +35,23 @@
 }
 
 .header__navbar {
-
+    display: flex;
+    justify-content: center !important;
 }
 
 .header__navbar li > a{
+    cursor: pointer;
     color: black;
+    text-align: center;
+}
+
+.header__navbar li > a[aria-current="page"] {
+    border-bottom: solid 3px #CC0D0D;
 }
 
 .MAIN {
     margin: auto;
-    margin-top: 45px;
+    margin-top: 6vw;
 }
 
 .MAIN__search {
@@ -77,6 +88,7 @@
     align-items: center;
     border-radius: 10px;
     box-shadow: 1px 2px 2px #363636f2;
+    background-color: white;
 }
 
 .MAIN__types .opt > img {

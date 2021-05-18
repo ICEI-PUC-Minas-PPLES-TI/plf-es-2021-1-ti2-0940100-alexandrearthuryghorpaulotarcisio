@@ -1,7 +1,9 @@
 body {
+    height: 100vh;
     margin: 0;
     padding: 0;
-    background: rgba(0, 201, 0, 0.5);
+    background: radial-gradient(50% 50% at 50% 50%, #CC0D0D 0%, #780C0C 100%);
+    overflow-y: hidden;
 }
 
 .gap-3{
@@ -11,8 +13,26 @@ body {
     align-items: center;
 }
 
+.logo {
+    width: 120px;
+    height: 120px;
+}
+
+.form {
+    margin-top: 120px;
+    grid-template-columns:  20% 60% 20%;
+}
+
 form {
-    margin-top: 80px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 50px;
+    grid-column-start: 2;
+}
+
+.form-label {
+    margin-bottom: none !important;
+    margin-right: 16px;
 }
 
 .form__links {
@@ -26,10 +46,11 @@ form {
 }
 
 .submit-link button{
-   background: #00C900;
+   background: #780C0C;
    border: none;
 }
 
 .form__msg {
     text-align: center;
+    padding-bottom: 30px;
 }

@@ -9,25 +9,29 @@
         integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
     <link href="../css/cadastro.css" rel="stylesheet">
-    <title>LocaLex</title>
+    <link rel="icon" href="../images/Icon/favicon.png" type="image/x-icon">
+    <title>LocaLex - Cadastrar</title>
 </head>
 
 <body>
     <div id="tela" class="form-box d-flex flex-column align-items-center">
-        <div class="form__msg">
-            <h1><b>Cadastrar</b></h1>
+        <div class="logo">
+            <img class="logo" alt="logo" src="../images/Icon/logo.png">
         </div>
         <form id="form-register" class="container needs-validation" novalidate action="../php/cadastro.php"
             method="POST">
             <div class="row justify-content-md-center gap-3">
+                <div class="form__msg">
+                    <h1><b>Cadastrar</b></h1>
+                </div>
                 <div class="col-8">
-                    <label for="validationServer01" class="form-label">Nome Completo</label>
+                    <label for="validationServer01" class="form-label"><b>Nome Completo:</b></label>
                     <input type="text" autocomplete="off" class="form-control username" id="username" name="username"
                         required placeholder="Nome Completo">
                     <div id="msgNome"></div>
                 </div>
                 <div class="col-8">
-                    <label for="exampleFormControlInput1" class="form-label">Email </label>
+                    <label for="exampleFormControlInput1" class="form-label"><b>Email:</b></label>
                     <input type="email" autocomplete="off" class="form-control useremail" id="email" placeholder="Email"
                         name="email" required>
                     <div class="invalid-feedback">Insert a valid email.</div>
@@ -35,7 +39,7 @@
                 </div>
                 <div class="row justify-content-md-center gap-3">
                     <div class="col-4">
-                        <label for="validationServer02" class="form-label">Sexo</label>
+                        <label for="validationServer02" class="form-label"><b>Sexo:</b></label>
                         <select class="form-select gender" aria-label="select example" id="gender" name="gender"
                             required>
                             <option selected>Selecione</option>
@@ -45,14 +49,14 @@
                         <div id="msgGender"></div>
                     </div>
                     <div class="col-4">
-                        <label for="validationDefault05" class="form-label">Data de Nascimento</label>
+                        <label for="validationDefault05" class="form-label"><b>Data de Nascimento:</b></label>
                         <input type="date" class="form-control dbirth" id="birth" name="birth" required>
                         <div id="msgNiver"></div>
                     </div>
                 </div>
                 <div class="row justify-content-md-center gap-3">
                     <div class="col-4">
-                        <label for="validationDefault03" class="form-label">CPF</label>
+                        <label for="validationDefault03" class="form-label"><b>CPF:</b></label>
                         <input maxlength="11" type="text" autocomplete="off" class="form-control cpf" id="cpf"
                             name="cpf" required placeholder="Apenas Números">
                         <div id="msgCPF"></div>
@@ -61,7 +65,7 @@
                         </div>
                     </div>
                     <div class="col-4">
-                        <label for="validationDefault04" class="form-label cnh">CNH</label>
+                        <label for="validationDefault04" class="form-label cnh"><b>CNH:</b></label>
                         <input type="text" class="form-control" maxlength="11" autocomplete="off" id="cnh" name="cnh"
                             required placeholder="Apenas Números">
                         <div id="msgCNH"></div>
@@ -71,13 +75,13 @@
                     </div>
                 </div>
                 <div class="col-8">
-                    <label for="inputPassword" class="col-sm-2 col-form-label password">Senha</label>
+                    <label for="inputPassword" class="col-sm-2 col-form-label password"><b>Senha:</b></label>
                     <input type="password" class="form-control" id="password" name="password" required
                         placeholder="Senha">
                     <div id="msgSenha"></div>
                 </div>
                 <div class="col-8">
-                    <label for="inputPassword" class="col-sm-2 col-form-label">Confirmar senha</label>
+                    <label for="inputPassword" class="col-sm-2 col-form-label"><b>Confirmar senha:</b></label>
                     <input type="password" class="form-control" id="confirmPassword" required
                         placeholder="Confirmar Senha">
                     <div id="msgConfirmarSenha"></div>

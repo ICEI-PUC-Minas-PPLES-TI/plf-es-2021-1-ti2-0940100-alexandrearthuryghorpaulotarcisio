@@ -1,5 +1,15 @@
-body{
-    background-color: rgba(0, 201, 0, 0.5);
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(50% 50% at 50% 50%, #CC0D0D 0%, #780C0C 100%);
+    overflow-y: hidden;
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 50px;
 }
 
 .gap-3{
@@ -11,10 +21,12 @@ body{
 
 form {
     padding: 30px;
+    background: white;
+    border-radius: 20px;
 }
 
 #btn-sub{
-    background: #00C900;
+    background: #780C0C;
     border: none;
 }
 
@@ -23,7 +35,6 @@ form {
 }
 
 .form__msg {
-    margin-top: 80px;
     text-align: center;
 
 }
