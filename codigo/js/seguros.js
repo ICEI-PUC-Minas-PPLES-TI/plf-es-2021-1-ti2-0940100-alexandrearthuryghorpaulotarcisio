@@ -324,14 +324,15 @@ seguros=()=>{
             </div>
         </section>
     `;
-    voltar(acessorios);
-    selecionarSegBas();
-    selecionarSegComp();
-    selecionarSegSuper();
+    
+    selecionarSegBas1();
+    selecionarSegComp1();
+    selecionarSegSuper1();
     proximo2();
+    voltar(acessorios);
 }
 
-selecionarSegBas=()=>{
+selecionarSegBas1=()=>{
     segBas=false;
     selecionarSegBas = document.getElementById('selecionarSegBas');
     selecionarSegBas.onclick=()=>{
@@ -343,7 +344,7 @@ selecionarSegBas=()=>{
     }
 }
 
-selecionarSegComp=()=>{
+selecionarSegComp1=()=>{
     segComp = false;
     selecionarSegComp = document.getElementById('selecionarSegComp');
     selecionarSegComp.onclick=()=>{
@@ -355,7 +356,7 @@ selecionarSegComp=()=>{
     }
 }
 
-selecionarSegSuper=()=>{
+selecionarSegSuper1=()=>{
     segSuper = false;
     selecionarSegSuper = document.getElementById('selecionarSegSuper');
     selecionarSegSuper.onclick=()=>{
@@ -369,7 +370,6 @@ selecionarSegSuper=()=>{
 
 proximo2=()=>{
     let btnProximo2= document.getElementById('btn_ProximoEtapa2');
-   
     btnProximo2.onclick=()=>{
         if( segSuper || segComp || segBas ){
 

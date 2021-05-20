@@ -3,7 +3,6 @@ body {
     margin: 0;
     padding: 0;
     background: radial-gradient(50% 50% at 50% 50%, #CC0D0D 0%, #780C0C 100%);
-    overflow-y: hidden;
 }
 
 .gap-3{
