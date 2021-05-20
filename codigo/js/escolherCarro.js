@@ -262,7 +262,7 @@ verMaisExecutivo=()=>{
                                     <div class="">
                                         <h5>${result[i].modelo}</h5>
                                     </div>
-                                    <a id="botaoCard" class="btn btn-primary" href="#">Selecionar</a>
+                                    <a id="botaoCard" class="btn btn-primary" href="../html/seguros.html">Selecionar</a>
                                 </div>
                             </div>
                         </div>
@@ -323,7 +323,7 @@ verMaisIntermediario=()=>{
                                     <div class="">
                                         <h5>${result[i].modelo}</h5>
                                     </div>
-                                    <a id="botaoCard" class="btn btn-primary" href="#">Selecionar</a>
+                                    <a id="botaoCard" class="btn btn-primary" href="../html/seguros.html">Selecionar</a>
                                 </div>
                             </div>
                         </div>
@@ -385,7 +385,7 @@ verMaisEconomico=()=>{
                                 <div class="">
                                     <h5>${result[i].modelo}</h5>
                                 </div>
-                                <a id="botaoCard" class="btn btn-primary" href="#">Selecionar</a>
+                                <a id="botaoCard" class="btn btn-primary" href="../html/seguros.html">Selecionar</a>
                             </div>
                         </div>
                     </div>`;
