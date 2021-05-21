@@ -136,8 +136,8 @@ Processo responsável por sugerir ao cliente uma avaliação e um comentário do
 
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 | --- | --- | --- | --- |
-| Resumo da Reserva | Área de texto |  |  |
-| Continuar | Link |  |  |
+| Resumo da Reserva | Área de texto | Máximo de 280 caracteres |  |
+| Continuar | Link | Caixa de confirmação |  |
 
 #### Processo 2 – Subprocesso Cadastro/Login do Processo "Aluguel de Automóveis Geral"
 
