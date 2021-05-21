@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background: radial-gradient(50% 50% at 50% 50%, #CC0D0D 0%, #780C0C 100%);
+    overflow-y: hidden;
 }
 
 .gap-3{
@@ -15,6 +16,7 @@ body {
 .logo {
     width: 120px;
     height: 120px;
+    margin-bottom: 4vh;
 }
 
 .form {
@@ -47,9 +49,23 @@ form {
 .submit-link button{
    background: #780C0C;
    border: none;
+   height: 40px;
 }
 
 .form__msg {
     text-align: center;
     padding-bottom: 30px;
+}
+
+@media (max-width:565px) {
+    form {
+        padding: 0;
+        padding-top: 40px;
+        border-radius: 0px;
+        padding-bottom: 100% !important;
+    }
+    
+    .submit-link .form-check > label {
+        font-size: 10pt;
+    }
 }
