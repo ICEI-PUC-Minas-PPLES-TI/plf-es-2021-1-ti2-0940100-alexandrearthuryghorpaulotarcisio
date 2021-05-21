@@ -112,9 +112,6 @@ Processo responsável por sugerir ao cliente uma avaliação e um comentário do
 
 ### 4.1. Detalhamento das atividades
 
-Descrever aqui cada uma das propriedades das atividades de cada um dos processos. Devem estar relacionadas com o modelo de processo apresentado anteriormente.
-
-
 #### Processo 1 – Aluguel de Automóveis Geral
 
 **Pesquisar por veículos**
@@ -172,7 +169,7 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 | --- | --- | --- | --- |
-|   Selecionar Carro  |   Seleção Única |  | |
+|   Selecionar Carro  | Seleção Única | Disponibilidade | |
 |   Selecionar Proteções  |   Seleção  | Mínimo uma proteção selecionada | Proteção básica. |
 |   Selecionar Proteções Extras  |  Múltipla escolha | |  |
 |   Selecionar Acessórios  |   Seleção Única | |  |
@@ -192,7 +189,7 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 | --- | --- | --- | --- |
-| Comentar | Caixa de texto |  |  |
+| Comentar | Caixa de texto | máximo de 280 catacteres |  |
 
 
 ### 4.2. Tecnologias
