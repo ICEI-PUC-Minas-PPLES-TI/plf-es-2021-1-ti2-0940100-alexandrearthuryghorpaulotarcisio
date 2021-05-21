@@ -29,11 +29,8 @@ acessorios =()=>{
                                                         <div class="d-block text-truncate mb-1">
                                                             <a href="#" class="cartproname nav-link">Cadeira para criança</a>
                                                         </div>
-
                                                         <div class="cartviewprice d-block">
                                                             <span class="amt">R$ 21,86</span>
-                                                            <span class="oldamt">R$ 30,36</span>
-                                                            <span class="disamt">28% off</span>
                                                         </div>
                                                     </div>
                                                     <div id="checkBox" class="col-2 col-lg-3 col-xl-2">
@@ -46,7 +43,7 @@ acessorios =()=>{
                                                             <div class="btnQtd">
                                                                 <button id="qtdMenos" type="button" class="btn btn-sm btn-qty"><i class="fa fa-minus"></i></button>
                                                             </div>
-                                                            <input type="text" class="form-control form-control-sm text-center" id="caixaQtd" value="" >
+                                                            <input type="text" class="form-control form-control-sm text-center" id="caixaQtd" value="0" >
                                                             <div class="btnQtd">
                                                                 <button id="qtdMais" type="button" class="btn btn-sm btn-qty"><i class="fa fa-plus"></i></button>
                                                             </div>
@@ -58,7 +55,6 @@ acessorios =()=>{
                                     </div>
                                 </div>
                             </div>
-
                             <div id="" class="card-body">
                                 <div class="col-lg-12 p-3 cardlist">
                                     <div class="col-lg-12">
@@ -76,11 +72,8 @@ acessorios =()=>{
                                                         <div class="d-block text-truncate mb-1">
                                                             <a href="#" class="cartproname nav-link">Sistema de Posicionamento Global - GPS</a>
                                                         </div>
-
                                                         <div class="cartviewprice d-block">
                                                             <span class="amt">R$ 13,50</span>
-                                                            <span class="oldamt">R$ 15,00</span>
-                                                            <span class="disamt">13% off</span>
                                                         </div>
                                                     </div>
                                                     <div id="checkBox" class="col-2 col-lg-3 col-xl-2">
@@ -105,7 +98,6 @@ acessorios =()=>{
                                     </div>
                                 </div>
                             </div>
-
                             <div id="" class="card-body">
                                 <div class="col-lg-12 p-3 cardlist">
                                     <div class="col-lg-12">
@@ -123,11 +115,8 @@ acessorios =()=>{
                                                         <div class="d-block text-truncate mb-1">
                                                             <a href="#" class="cartproname nav-link">Bagageiro</a>
                                                         </div>
-
                                                         <div class="cartviewprice d-block">
                                                             <span class="amt">R$ 112,80</span>
-                                                            <span class="oldamt">R$ 120,00</span>
-                                                            <span class="disamt">6% off</span>
                                                         </div>
                                                     </div>
                                                     <div id="checkBox" class="col-2 col-lg-3 col-xl-2">
@@ -157,7 +146,6 @@ acessorios =()=>{
                 </div>
             </div>
         </div>
-
         <div id="btnProximo" class=" container-fluid mt-3 mb-4 row">
             <div class="col-md-8">
                 <a id="btn_ProximoEtapa1" href="#" class="btn btn-primary">Próximo</a>
@@ -188,11 +176,13 @@ selecionar=()=>{
 selecionarGPS=()=>{
     selecionadoGPS = false;
     let selecionarGPS = document.getElementById('selecionarGPS');
-    selecionarGPS.onclick=()=>{
-        if(selecionarGPS.checked){
-            selecionadoGPS = true;
-        }else{
-            selecionadoGPS = false;
+    if(selecionarGPS){
+        selecionarGPS.onclick=()=>{
+            if(selecionarGPS.checked){
+                selecionadoGPS = true;
+            }else{
+                selecionadoGPS = false;
+            }
         }
     }
 }
@@ -200,11 +190,13 @@ selecionarGPS=()=>{
 selecionarBAG=()=>{
     selecionadoBAG = false;
     let selecionarBAG = document.getElementById('selecionarBAG');
-    selecionarBAG.onclick=()=>{
-        if(selecionarBAG.checked){
-            selecionadoBAG = true;
-        }else{
-            selecionadoBAG = false;
+    if(selecionarBAG) {
+        selecionarBAG.onclick=()=>{
+            if(selecionarBAG.checked){
+                selecionadoBAG = true;
+            }else{
+                selecionadoBAG = false;
+            }
         }
     }
 }
@@ -224,15 +216,19 @@ qtdCard=()=>{
 
 btnMais=()=>{
     let qtdMais= document.getElementById('qtdMais');
+    let caixaQtd= document.getElementById('caixaQtd');
     qtdMais.onclick=()=>{
-
+        if(parseInt(caixaQtd.value) < 3)
+            caixaQtd.value = parseInt(caixaQtd.value) + 1;
     }
 }
 
 btnMenos=()=>{
     let qtdMenos= document.getElementById('qtdMenos');
-    qtdMais.onclick=()=>{
-        
+    let caixaQtd= document.getElementById('caixaQtd');
+    qtdMenos.onclick=()=>{
+        if(parseInt(caixaQtd.value) > 0)
+            caixaQtd.value = parseInt(caixaQtd.value) - 1;
     }
 }
 
