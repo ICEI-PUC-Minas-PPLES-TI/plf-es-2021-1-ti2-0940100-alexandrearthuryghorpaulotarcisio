@@ -221,9 +221,9 @@ Usar o seguinte modelo:
 
 | **Indicador** | **Objetivos** | **Descrição** | **Cálculo** | **Fonte dados** | **Perspectiva** |
 | --- | --- | --- | --- | --- | --- |
-| Percentual reclamações | Avaliar quantitativamente as reclamações | Percentual de reclamações em relação ao total atendimento |   | Tabela reclamações | Aprendizado e Crescimento |
-| Taxa de Requisições abertas | Melhorar a prestação de serviços medindo a porcentagem de requisições | Mede % de requisições atendidas na semana | \*100 | Tabela solicitações | Processos internos |
-| Taxa de entrega de material | Manter controle sobre os materiais que estão sendo entregues | Mede % de material entregue dentro do mês |   | Tabela Pedidos | Clientes |
+| Taxa de crescimento trimestral | Avaliar o crescimento de clientes trimestralmente | Mede o percentual de novos clientes do trimestral atual em relação ao trimestre anterior | TCR = Total de clientes do trimestre de referência (trimestre anterior); NCA = Número total de clientes do trimestre atual; TC = Taxa de crescimento do trimestre atual comparada com o trimestre anterior. Fórmula: TC = 100*(NCA – TCR)/TCR | Tabela de clientes | Aprendizado e Crescimento |
+| Taxa média de aprovação do Sistema de Informação | Melhorar a prestação de serviços medindo a taxa de aprovação dos clientes em relação ao sistema de informação da empresa | Mede a nota média de aprovação dos clientes em relação ao sistema da empresa | TMA = Taxa Média de Aprovação; NTN = Número Total de Notas; SN = Somatório das Notas. Fórmula: TMA = SN / 5*NTN (Para notas de 1 a 5). | Tabela Aluguel | Aprendizado e Crescimento |
+| Valor gasto mensal por cliente | Direcionar promoções para clientes e dar descontos para clientes que gastam mais | Mede o montante gasto mensal em alugueis por cliente | S = Somatório do valor gasto mensal por cliente | Tabela Aluguel e Cliente | Processos internos |
 
 Obs.: todas as informações para gerar os indicadores devem estar no diagrama de classe **a ser proposto**
 
