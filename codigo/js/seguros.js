@@ -36,7 +36,7 @@ acessorios =()=>{
                                                         </div>
                                                     </div>
                                                     <div id="checkBox" class="col-2 col-lg-3 col-xl-2">
-                                                        <input type="checkbox" name="" id="selecionar" value="false">
+                                                        <input type="checkbox" name="" id="cadeirinha" value="false">
                                                     </div>
                                                 </div>
                                                 <div class="row">
@@ -154,53 +154,37 @@ acessorios =()=>{
             </div>
         </div>
     `;
-    selecionar();
-    selecionarGPS();
-    selecionarBAG();
     qtdCard();
     btnMais();
     btnMenos();
     proximo1();
 } 
 
-selecionar=()=>{
-    selecionadoCad = false;
-    let selecionar = document.getElementById('selecionar');
-    selecionar.onclick=()=>{
-        if(selecionar.checked){
-            selecionarCad = true;
-        }else{
-            selecionarCad = false;
+setSession=()=>{
+    var acessorioInfo = new Array();
+    let checkboxCadeirinha = document.getElementById('cadeirinha');
+    let checkboxGPS = document.getElementById('selecionarGPS');
+    let checkboxBagageiro = document.getElementById('selecionarBAG');
+    if(checkboxCadeirinha.checked){
+        let fieldCadeirinha = document.getElementById('caixaQtd');
+        let numCadeirinha = parseInt(fieldCadeirinha.value)
+        if(numCadeirinha > 0){
+            acessorioInfo[0] = {
+                qtdeCadeirinha: numCadeirinha,
+                cadeirinhaPreco: 21.86
+            };
+            sessionStorage.setItem("acessorioInfo", JSON.stringify(acessorioInfo));
         }
     }
-}
-
-selecionarGPS=()=>{
-    selecionadoGPS = false;
-    let selecionarGPS = document.getElementById('selecionarGPS');
-    if(selecionarGPS){
-        selecionarGPS.onclick=()=>{
-            if(selecionarGPS.checked){
-                selecionadoGPS = true;
-            }else{
-                selecionadoGPS = false;
-            }
-        }
+    if(checkboxGPS.checked){
+        acessorioInfo[1] = {GPSPreco: 13.50};
+        sessionStorage.setItem("acessorioInfo", JSON.stringify(acessorioInfo));
     }
-}
-
-selecionarBAG=()=>{
-    selecionadoBAG = false;
-    let selecionarBAG = document.getElementById('selecionarBAG');
-    if(selecionarBAG) {
-        selecionarBAG.onclick=()=>{
-            if(selecionarBAG.checked){
-                selecionadoBAG = true;
-            }else{
-                selecionadoBAG = false;
-            }
-        }
+    if(checkboxBagageiro.checked){
+        acessorioInfo[2] = {bagageiroPreco: 112.80};
+        sessionStorage.setItem("acessorioInfo", JSON.stringify(acessorioInfo));
     }
+    sessionStorage.setItem("acessorioInfo", JSON.stringify(acessorioInfo));
 }
 
 qtdCard=()=>{
@@ -237,6 +221,7 @@ btnMenos=()=>{
 proximo1=()=>{
     let btnProximo1= document.getElementById('btn_ProximoEtapa1');
     btnProximo1.onclick=()=>{
+        setSession();
         seguros();
     }
 }
@@ -258,7 +243,7 @@ seguros=()=>{
                                 <h3>Proteção Básica</h3>
                             </div>
                             <div class="panel-body text-center">
-                                <p><strong>R$ 9,00 / Diária</strong></p>
+                                <p><strong>R$9,00</strong></p>
                             </div>
                             <ul class="list-group text-center">
                                 <li class="list-group-item"><i class="fa fa-check"></i> Proteção - LDW</li>
@@ -280,7 +265,7 @@ seguros=()=>{
                                 <h3>Proteção Completa</h3>
                             </div>
                             <div class="panel-body text-center">
-                                <p><strong>R$24,00 / Diária</strong></p>
+                                <p><strong>R$24,00</strong></p>
                             </div>
                             <ul class="list-group text-center">
                                 <li class="list-group-item"><i class="fa fa-check"></i> Proteção Básica-LDW</li>
@@ -302,7 +287,7 @@ seguros=()=>{
                                 <h3>Proteção Super</h3>
                             </div>
                             <div class="panel-body text-center">
-                                <p><strong>R$44,00 / Diária</strong></p>
+                                <p><strong>R$44,00</strong></p>
                             </div>
                             <ul class="list-group text-center">
                                 <li class="list-group-item"><i class="fa fa-check"></i> Proteção Completa-LDW</li>
@@ -368,11 +353,33 @@ selecionarSegSuper1=()=>{
 }
 
 proximo2=()=>{
+    seguroInfo = new Array();
     let btnProximo2= document.getElementById('btn_ProximoEtapa2');
     btnProximo2.onclick=()=>{
         if( segSuper || segComp || segBas ){
-
+            if(segBas){
+                seguroInfo[0] = {
+                    segBas: true,
+                    ssegCompPreco: 9.00
+                };
+                sessionStorage.setItem("seguroInfo", JSON.stringify(seguroInfo));
+            }
+            if(segComp){
+                seguroInfo[1] = {
+                    segComp: true,
+                    segBasPreco: 24.00
+                };
+                sessionStorage.setItem("seguroInfo", JSON.stringify(seguroInfo));
+            }
+            if(segSuper){
+                seguroInfo[2] = {
+                    segSuper: true,
+                    segSuperPreco: 44.00
+                };
+                sessionStorage.setItem("seguroInfo", JSON.stringify(seguroInfo));
+            }
         }else{
+            sessionStorage.setItem("seguroInfo", JSON.stringify(seguroInfo));
             event.preventDefault();
             alert('Selecione no minímo uma proteção');
         }

@@ -1,10 +1,10 @@
 <?php
     $campoEmail = filter_input(INPUT_GET, 'email');
     $campoSenha = filter_input(INPUT_GET, 'password');
-    $host = "";
-    $database = "";
-    $user = "";
-    $password = "";
+    $host = "baseti.postgres.database.azure.com";
+    $database = "localexx";
+    $user = "adm@baseti";
+    $password = "@Pucminas";
     $connection = pg_connect("host=$host dbname=$database user=$user password=$password");
     $query = "SELECT * from cliente";
     $result_set = pg_query($connection, $query) or die("Erro de conexao! <br/>");

@@ -1,9 +1,10 @@
 window.onload=()=>{
-    dataHora();
+    var reservaInfo = new Array();
+    dataHora(reservaInfo);
     proximoEtapa1();
 }
 
-dataHora=()=>{
+dataHora=(reservaInfo)=>{
     let dataRetirada = document.getElementById('dataRetirada');
     let horarioRetirada = document.getElementById('horarioRetirada');
     let dataDevolucao = document.getElementById('dataDevolucao');
@@ -46,6 +47,10 @@ dataHora=()=>{
             dataRetirada.style.border = 'red solid';
         }
     }
+    dataRetirada.onchange=()=>{
+        reservaInfo[0] = {dataRetirada: dataRetirada.value};
+        sessionStorage.setItem("reservaInfo", JSON.stringify(reservaInfo));
+    }
     
     horarioRetirada.onblur=()=>{
         let d = new Date();
@@ -79,6 +84,10 @@ dataHora=()=>{
             horarioRetirada.style.border = 'none';
         }
     }
+    horarioRetirada.onchange=()=>{
+        reservaInfo[1] = {horaRetirada: horarioRetirada.value};
+        sessionStorage.setItem("reservaInfo", JSON.stringify(reservaInfo));
+    }
 
     dataDevolucao.onblur=()=>{
         let posicao= dataDevolucao.value.split('-');
@@ -109,6 +118,10 @@ dataHora=()=>{
             dataDevolucao.style.border = 'red solid';
         }
     }
+    dataDevolucao.onchange=()=>{
+        reservaInfo[2] = {dataDevolucao: dataDevolucao.value};
+        sessionStorage.setItem("reservaInfo", JSON.stringify(reservaInfo));
+    }
 
     horarioDevolucao.onblur=()=>{
         let posicao = horarioDevolucao.value.split(':');
@@ -135,9 +148,13 @@ dataHora=()=>{
             horarioDevolucao.style.border = 'none';
         }
     }
+    horarioDevolucao.onchange=()=>{
+        reservaInfo[3] = {horarioDevolucao: horarioDevolucao.value};
+        sessionStorage.setItem("reservaInfo", JSON.stringify(reservaInfo));
+    }
 }
 
-proximoEtapa1 =()=>{
+proximoEtapa1=()=>{
     let btn_ProximoEtapa1 = document.getElementById('btn_ProximoEtapa1');
     
     btn_ProximoEtapa1.onclick=()=>{
@@ -150,7 +167,7 @@ proximoEtapa1 =()=>{
     }
 }
 
-categorias =()=>{
+categorias=()=>{
     let MAIN = document.getElementById('MAIN');
     MAIN.innerHTML = 
     `
@@ -263,7 +280,7 @@ verMaisExecutivo=()=>{
                                     <div class="">
                                         <h5>${result[i].modelo}</h5>
                                     </div>
-                                    <a id="botaoCard" class="btn btn-primary" href="../html/seguros.html">Selecionar</a>
+                                    <a id="botaoCard" class="btn btn-primary" href="../html/seguros.html" onclick="botaoSelecionarCarro(${"card"+i})">Selecionar</a>
                                 </div>
                             </div>
                         </div>
@@ -324,7 +341,7 @@ verMaisIntermediario=()=>{
                                     <div class="">
                                         <h5>${result[i].modelo}</h5>
                                     </div>
-                                    <a id="botaoCard" class="btn btn-primary" href="../html/seguros.html">Selecionar</a>
+                                    <a id="botaoCard" class="btn btn-primary" href="../html/seguros.html" onclick="botaoSelecionarCarro(${"card"+i})">Selecionar</a>
                                 </div>
                             </div>
                         </div>
@@ -386,7 +403,7 @@ verMaisEconomico=()=>{
                                 <div class="">
                                     <h5>${result[i].modelo}</h5>
                                 </div>
-                                <a id="botaoCard" class="btn btn-primary" href="../html/seguros.html">Selecionar</a>
+                                <a id=${"card"+i} class="btn btn-primary" href="../html/seguros.html" onclick="botaoSelecionarCarro(${"card"+i})">Selecionar</a>
                             </div>
                         </div>
                     </div>`;
@@ -394,4 +411,10 @@ verMaisEconomico=()=>{
                 $('#MAIN').html(texto);
             });
     }
+}
+
+botaoSelecionarCarro=(id)=>{
+    var carInfo = new Array();
+    carInfo = {carro: id.id};
+        sessionStorage.setItem("carInfo", JSON.stringify(carInfo));
 }

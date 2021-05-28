@@ -1,9 +1,9 @@
 <?php
     header('Content-type: application/json');
-    $host = "";
-    $database = "";
-    $user = "";
-    $password = "";
+    $host = "baseti.postgres.database.azure.com";
+    $database = "localexx";
+    $user = "adm@baseti";
+    $password = "@Pucminas";
     $connection = pg_connect("host=$host dbname=$database user=$user password=$password");
 
     $result = pg_query($connection, "SELECT * from automovel where idcategoria = 1");

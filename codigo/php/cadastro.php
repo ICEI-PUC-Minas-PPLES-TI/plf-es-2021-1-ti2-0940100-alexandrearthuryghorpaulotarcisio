@@ -14,10 +14,10 @@ if($gender == 'male'){
 }
 
 if (!empty($username)){
-    $host = "";
-    $database = "";
-    $user = "";
-    $password = "";
+    $host = "baseti.postgres.database.azure.com";
+    $database = "localexx";
+    $user = "adm@baseti";
+    $password = "@Pucminas";
     
     $connection = pg_connect("host=$host dbname=$database user=$user password=$password") or die("Erro de conexao<br/>");
     $query = "INSERT INTO cliente (cpf, cnh, sexo, dtnascimento, nome, email, senha) VALUES ('$cpf', '$cnh', '$gender', '$birth', '$username', '$email', '$senha')";
