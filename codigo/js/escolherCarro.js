@@ -156,6 +156,7 @@ categorias =()=>{
     `
         <div class="container Categoria">
             <div id ="secaoCategoria" class="row">
+            <label id="tituloEtapa1" for=""><p class="titulo_Etapa1">2º Etapa</p> </label>
             <div id="externo" class="col-xs-12 col-sm-6 col-md-4">
                     <div class="image-flip" >
                         <div class="mainflip flip-0">

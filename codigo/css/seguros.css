@@ -39,7 +39,16 @@ body {
 .btnVoltar{
     display: inline-block;
 }
+#tituloEtapa1{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+}
 
+.titulo_Etapa1{
+    font-size:25px;
+}
 .MAIN {
     margin: auto;
     margin-top: 45px;
@@ -59,6 +68,7 @@ body {
     background-color: #fff;
     font-size: 18px;
     padding: 10px 16px;
+    text-align: center;
 }
 .proviewcard .card-body{
     padding: 0;
@@ -79,7 +89,7 @@ body {
     display: inline;
 }
 .cartproname:hover{
-    color: #780C0C;
+    color: #CC0D0D;
     text-decoration: none;
 }
 .cartviewprice{
@@ -111,7 +121,7 @@ body {
 .btn-qty{
     height: 25px;
     color: #fff !important;
-    background: #780C0C !important;
+    background: #CC0D0D !important;
     border: none !important;
     padding: 0px 3px !important;
 }
@@ -157,14 +167,14 @@ body {
 }
 
 #btn_ProximoEtapa1:hover{
-    background-color: white;
-    border-color: #780C0C;
-    color: black;
+    background-color: #CC0D0D;
+    border-color: #CC0D0D;
+    color: #fff;
 }
 
 .btn-primary {
     color: #fff;
-    background: #780C0C;
+    background: #CC0D0D;
     border: none;
 }
 
@@ -213,7 +223,7 @@ body {
 }
 
 #btn_ProximoEtapa2:hover{
-    background-color: white;
-    border-color: #780C0C;
-    color: black;
+    background-color:#CC0D0D;
+    border-color: #CC0D0D;
+    color: #fff;
 }

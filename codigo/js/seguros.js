@@ -7,7 +7,9 @@ acessorios =()=>{
     MAIN.innerHTML = 
     `
         <div id="acessorios" class="container-fluid mt-3 mb-4">
+        
             <div class="col-lg-8">
+            <label id="tituloEtapa1" for=""><p class="titulo_Etapa1">3º Etapa</p> </label>
                 <div class="row">
                     <div class="col-lg-12 px-0 pr-lg-2 mb-2 mb-lg-0">
                         <div class="card border-light bg-white card proviewcard shadow-sm">
@@ -243,6 +245,7 @@ seguros=()=>{
     let MAIN = document.getElementById('MAIN');
     MAIN.innerHTML = 
     `
+        <label id="tituloEtapa1" for=""><p class="titulo_Etapa1"> 4º Etapa</p> </label>
         <section id="plans" class="card">
             <div class="container">
                 <div class="row">
@@ -315,7 +318,7 @@ seguros=()=>{
             </div>
             <div id="btnProximo" class=" container-fluid mt-3 mb-4 row">
                 <div class="col-md-8">
-                    <a id="btn_ProximoEtapa2" href="#" class="btn btn-primary">Próximo</a>
+                    <a id="btn_ProximoEtapa2" href="../html/reserva.html" class="btn btn-primary">Próximo</a>
                 </div>
             </div>
         </section>
