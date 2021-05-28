@@ -6,4 +6,8 @@
 * 10/03/2021 - Divisão de tarefas da segunda sprint.
 * 22/04/2021 - Monitoramento da entrega dos artefatos da Sprint 3
 * 29/04/2021 - Monitoramento da entrega dos artefatos da Sprint 4 
+* 06/05/2021 - Monitoramento da entrega dos artefatos da Sprint 4
+* 13/05/2021 - Monitoramento da entrega dos artefatos da Sprint 5
+* 21/05/2021 - Monitoramento da entrega dos artefatos da Sprint 5
+* 28/05/2021 - Monitoramento da entrega dos artefatos da Sprint 5 e Planejamento da Sprint 6
 
