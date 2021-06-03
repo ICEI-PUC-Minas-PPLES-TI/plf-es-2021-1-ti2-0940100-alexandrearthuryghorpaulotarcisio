@@ -216,12 +216,21 @@ div.footer a.Cbtn-danger:hover{
     transform: translate(-50%, -50%);
 }
 
-.fimTitulo{
+.fimTitulo #tituloEtapa1{
 	font-size: xxx-large;
-    color: darkgrey;
+   	color: darkgrey;
 }
 
 #voltarLink{
 	font-size: 20px;
+}
+
+.avaliacao{
+	padding: 15px;
+	border: #ced1d6 solid 1px;
+	background-color:white;
+	height: 100%;
+	width: 100%;
+	margin-bottom: 20px;
 }
 
