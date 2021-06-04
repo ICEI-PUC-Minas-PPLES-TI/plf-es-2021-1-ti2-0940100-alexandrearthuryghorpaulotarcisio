@@ -10,4 +10,5 @@
 * 13/05/2021 - Monitoramento da entrega dos artefatos da Sprint 5
 * 21/05/2021 - Monitoramento da entrega dos artefatos da Sprint 5
 * 28/05/2021 - Monitoramento da entrega dos artefatos da Sprint 5 e Planejamento da Sprint 6
+* 04/06/2021 - Monitoramento da entrega dos artefatos da Sprint 6
 
