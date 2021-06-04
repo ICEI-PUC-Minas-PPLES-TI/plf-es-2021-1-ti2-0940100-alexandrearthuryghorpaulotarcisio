@@ -40,6 +40,10 @@ body {
     display: inline-block;
 }
 
+#voltar i {
+    color: #CC0D0D;
+}
+
 
 #etapa_1{
     display:flex;

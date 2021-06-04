@@ -26,6 +26,7 @@ body {
 .chev {
     width: 48px;
     height: 48px;
+    color: #CC0D0D;
 }
 
 .chev[aria-expanded="true"]{
