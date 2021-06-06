@@ -151,3 +151,7 @@ body {
         width: 400px;
     }
 }
+
+.nav-link{
+    padding: 0;
+}
