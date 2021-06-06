@@ -9,8 +9,8 @@ loadData=()=>{
         let retirada = document.getElementById('retirada');
         let devolucao = document.getElementById('devolucao');
         retiradaInfos = JSON.parse(sessionStorage.getItem("reservaInfo"));
-        retirada.innerHTML = `Retirada ${retiradaInfos[0].dataRetirada} <br> ${retiradaInfos[1].horaRetirada}`;
-        devolucao.innerHTML = `Devolução ${retiradaInfos[2].dataDevolucao} <br> ${retiradaInfos[3].horarioDevolucao}`;
+        retirada.innerHTML = ` ${retiradaInfos[0].dataRetirada} <br> ${retiradaInfos[1].horaRetirada}`;
+        devolucao.innerHTML = ` ${retiradaInfos[2].dataDevolucao} <br> ${retiradaInfos[3].horarioDevolucao}`;
     }
     if(sessionStorage.hasOwnProperty("acessorioInfo")){
         acessorioInfos = JSON.parse(sessionStorage.getItem("acessorioInfo"));
@@ -18,49 +18,49 @@ loadData=()=>{
         let cadeirinha = document.getElementById('Cadeirinha');
         let bagageiro = document.getElementById('Bagageiro');
         if(acessorioInfos[0]){
-            cadeirinha.innerHTML = `Cadeirinha <br> Sim QTD: ${acessorioInfos[0].qtdeCadeirinha}`;
+            cadeirinha.innerHTML = ` Sim QTD: ${acessorioInfos[0].qtdeCadeirinha}`;
             valor += acessorioInfos[0].cadeirinhaPreco * acessorioInfos[0].qtdeCadeirinha;
         } else {
-            cadeirinha.innerHTML = `Cadeirinha <br> Não`;
+            cadeirinha.innerHTML = `  Não`;
         }
         if(acessorioInfos[1]){
-            GPS.innerHTML = `GPS <br> Sim`;
+            GPS.innerHTML = `  Sim`;
             valor += acessorioInfos[1].GPSPreco;
         } else {
-            GPS.innerHTML = `GPS <br> Não`;
+            GPS.innerHTML = `  Não`;
         }
         if(acessorioInfos[2]){
-            bagageiro.innerHTML = `Bagageiro <br> Sim`;
+            bagageiro.innerHTML = `  Sim`;
             valor += acessorioInfos[2].bagageiroPreco;
         } else {
-            bagageiro.innerHTML = `Bagageiro <br> Não`;
+            bagageiro.innerHTML = `  Não`;
         }
     }
     if(sessionStorage.hasOwnProperty("seguroInfo")){
         seguroInfos = JSON.parse(sessionStorage.getItem("seguroInfo"));
         let seguroinformacao = document.getElementById('seguroinf');
         if(seguroInfos[0] && seguroInfos[1] && seguroInfos[2]){
-            seguroinformacao.innerHTML = `Seguro <br> Básico + Completo + Super`;
+            seguroinformacao.innerHTML = ` Básico + Completo + Super`;
             valor+= seguroInfos[0].ssegCompPreco + seguroInfos[1].segBasPreco + seguroInfos[2].segSuperPreco;
         }else if(seguroInfos[0] && seguroInfos[1]){
-            seguroinformacao.innerHTML = `Seguro <br> Básico + Completo`;
+            seguroinformacao.innerHTML = ` Básico + Completo`;
             valor+= seguroInfos[0].ssegCompPreco + seguroInfos[1].segBasPreco;
         }else if(seguroInfos[0] && seguroInfos[2]){
-            seguroinformacao.innerHTML = `Seguro <br> Completo + Super`;
+            seguroinformacao.innerHTML = ` Completo + Super`;
             valor+= seguroInfos[0].ssegCompPreco + seguroInfos[2].segSuperPreco;
         }else if(seguroInfos[1] && seguroInfos[2]){
-            seguroinformacao.innerHTML = `Seguro <br> Básico + Super`;
+            seguroinformacao.innerHTML = ` Básico + Super`;
             valor+= seguroInfos[1].segBasPreco + seguroInfos[1].segSuperPreco;
         }else if(seguroInfos[0]){
-            seguroinformacao.innerHTML = `Seguro <br> Básico`;
+            seguroinformacao.innerHTML = ` Básico`;
             valor+= seguroInfos[0].ssegCompPreco;;
         }
         else if(seguroInfos[1]){
-            seguroinformacao.innerHTML = `Seguro <br> Completo`;
+            seguroinformacao.innerHTML = ` Completo`;
             valor+= seguroInfos[1].segBasPreco;
         }
         else if(seguroInfos[2]){
-            seguroinformacao.innerHTML = `Seguro <br> Super`;
+            seguroinformacao.innerHTML = ` Super`;
             valor+= seguroInfos[2].segSuperPreco;
         }
     }
@@ -121,10 +121,7 @@ confirmar=()=>{
                     <a id="voltarLink" class="nav-link active" href="#"> Voltar para página principal</a>
 
                 </label>
-                
-                
             </div>
-            
         `;
         voltarHome();
     }
@@ -158,7 +155,7 @@ voltarHome=()=>{
 
             }, function(msg){
             });
-            //voltar.href = "../html/home.html";
+            voltar.href = "../html/home.html";
         }else{
             alerta();
         }

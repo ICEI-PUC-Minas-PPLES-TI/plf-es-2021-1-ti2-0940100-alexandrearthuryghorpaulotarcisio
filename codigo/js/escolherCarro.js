@@ -18,7 +18,7 @@ dataHora=(reservaInfo)=>{
         let d = new Date();
         ano_atual = d.getFullYear();
         mes_atual = d.getMonth()+1;
-        dia_atual = d.getDay()+9;
+        dia_atual = d.getDay()+6;
         let posicao= dataRetirada.value.split('-');
         anoRet = posicao[0];
         mesRet = posicao [1];
@@ -26,25 +26,31 @@ dataHora=(reservaInfo)=>{
         if(anoRet > ano_atual){
             dataRet=true;
             dataRetirada.style.border = 'none';
+            horarioRetirada.removeAttribute('readonly');
         }else if(anoRet==ano_atual){
             if(mesRet > mes_atual){
                 dataRet=true;
                 dataRetirada.style.border = 'none';
+                horarioRetirada.removeAttribute('readonly');
             }else if(mesRet== mes_atual){
                 if(diaRet>= dia_atual){
                     dataRet=true;
                     dataRetirada.style.border = 'none';
+                    horarioRetirada.removeAttribute('readonly');
                 }else{
                     dataRet=false;
                     dataRetirada.style.border = 'red solid';
+                    horarioRetirada.setAttribute('readonly','readonly');
                 }
             }else{
                 dataRet=false;
                 dataRetirada.style.border = 'red solid';
+                horarioRetirada.setAttribute('readonly','readonly');
             }
         }else{
             dataRet=false;
             dataRetirada.style.border = 'red solid';
+            horarioRetirada.setAttribute('readonly','readonly');
         }
     }
     dataRetirada.onchange=()=>{
@@ -64,24 +70,30 @@ dataHora=(reservaInfo)=>{
             if(hrRet>hr_atual){
                 horaRet=true;
                 horarioRetirada.style.border = 'none';
+                dataDevolucao.removeAttribute('readonly');
             }else if(hrRet == hr_atual){
                 if(minRet > min_atual){
                     horaRet = true;
                     horarioRetirada.style.border = 'none';
+                    dataDevolucao.removeAttribute('readonly');
                 }else{
                     horaRet=false;
                     horarioRetirada.style.border = 'red solid';
+                    dataDevolucao.setAttribute('readonly','readonly');
                 }
             }else{
                 horaRet = false;
                 horarioRetirada.style.border = 'red solid';
+                dataDevolucao.setAttribute('readonly','readonly');
             } 
         }else if(dataRetirada.value==""){
             horaRet = false;
                 horarioRetirada.style.border = 'red solid';
+                dataDevolucao.setAttribute('readonly','readonly');
         }else{
             horaRet=true;
             horarioRetirada.style.border = 'none';
+            dataDevolucao.removeAttribute('readonly');
         }
     }
     horarioRetirada.onchange=()=>{
@@ -97,25 +109,31 @@ dataHora=(reservaInfo)=>{
         if(anoDev > anoRet){
             dataDev=true;
             dataDevolucao.style.border = 'none';
+            horarioDevolucao.removeAttribute('readonly');
         }else if(anoDev==anoRet){
             if(mesDev > mesRet){
                 dataDev=true;
                 dataDevolucao.style.border = 'none';
+                horarioDevolucao.removeAttribute('readonly');
             }else if(mesDev==mesRet){
                 if(diaDev >=diaRet){
                     dataDev =true;
                     dataDevolucao.style.border = 'none';
+                    horarioDevolucao.removeAttribute('readonly');
                 }else{
                     dataDev = false;
                     dataDevolucao.style.border = 'red solid';
+                    horarioDevolucao.setAttribute('readonly','readonly');
                 }
             }else{
                 dataDev = false;
                 dataDevolucao.style.border = 'red solid';
+                horarioDevolucao.setAttribute('readonly','readonly');
             }
         }else{
             dataDev = false;
             dataDevolucao.style.border = 'red solid';
+            horarioDevolucao.setAttribute('readonly','readonly');
         }
     }
     dataDevolucao.onchange=()=>{

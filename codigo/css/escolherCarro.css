@@ -184,10 +184,6 @@ body {
     margin-top: 10px;
 }
 
-.card-text{
-    min-width: 313px;
-    min-height: 190px;
-}
 
 .btn-primary:hover, .btn-primary:focus {  
     background-color: #CC0D0D;

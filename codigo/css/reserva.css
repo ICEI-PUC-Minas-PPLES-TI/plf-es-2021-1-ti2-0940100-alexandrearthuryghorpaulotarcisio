@@ -91,7 +91,7 @@ img{
 .dates{
 	border:1px solid #ebeff2;
 	border-radius:5px;
-	padding:20px 0px;
+	padding:5px 0px;
 	margin:10px 20px;
 	font-size:16px;
 	color:#5aadef;
@@ -130,7 +130,6 @@ img{
 	border-radius: 0 0 5px 5px;
 }
 
-
 .stats div{
 	border-right:1px solid #ebeff2;
 	width: 33.33333%;
@@ -143,6 +142,7 @@ img{
 	background:#f7f8fa;
 	overflow:auto;
 	padding-top:15px;
+	padding-bottom:15px;
 	font-size:20px;
 	color:#59687f;
 	font-weight:600;
@@ -233,4 +233,3 @@ div.footer a.Cbtn-danger:hover{
 	width: 100%;
 	margin-bottom: 20px;
 }
-
