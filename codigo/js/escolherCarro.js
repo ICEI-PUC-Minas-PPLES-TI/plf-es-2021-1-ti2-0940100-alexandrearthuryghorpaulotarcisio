@@ -1,6 +1,6 @@
 window.onload=()=>{
     var reservaInfo = new Array();
-    //dataHora(reservaInfo);
+    dataHora(reservaInfo);
     proximoEtapa1();
 }
 
@@ -156,16 +156,13 @@ dataHora=(reservaInfo)=>{
 
 proximoEtapa1=()=>{
     let btn_ProximoEtapa1 = document.getElementById('btn_ProximoEtapa1');
-    
     btn_ProximoEtapa1.onclick=()=>{
-        categorias();
-        /*if(dataRet && horaRet && dataDev && horaDev){
+        if(dataRet && horaRet && dataDev && horaDev){
             categorias();
         }else{
             event.preventDefault(btn_ProximoEtapa1);
             alert('Preencha os campos corretamente');
         }
-        */
     }
 }
 
