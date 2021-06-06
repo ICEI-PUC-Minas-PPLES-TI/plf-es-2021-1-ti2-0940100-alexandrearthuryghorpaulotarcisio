@@ -1,6 +1,6 @@
 window.onload=()=>{
     var reservaInfo = new Array();
-    dataHora(reservaInfo);
+    //dataHora(reservaInfo);
     proximoEtapa1();
 }
 
@@ -158,12 +158,14 @@ proximoEtapa1=()=>{
     let btn_ProximoEtapa1 = document.getElementById('btn_ProximoEtapa1');
     
     btn_ProximoEtapa1.onclick=()=>{
-        if(dataRet && horaRet && dataDev && horaDev){
+        categorias();
+        /*if(dataRet && horaRet && dataDev && horaDev){
             categorias();
         }else{
             event.preventDefault(btn_ProximoEtapa1);
             alert('Preencha os campos corretamente');
         }
+        */
     }
 }
 
@@ -239,22 +241,23 @@ verMaisExecutivo=()=>{
             type: 'GET',
             dataType: 'json'
             }).done(function(result){
+                texto = `<div class="row" id="ads">`;
                 for(var i=0; i<result.length; i++){
-                    texto +=`<div class="row" id="ads">
+                    texto +=`
                         <div id="cardCarro" class="col-md-4 col-lg-4">
                             <div class="card rounded">
                                 <div class="card-image">
                                     <span class="card-notify-badge">
                                         <img class="img-fluid" id="iconCardCarro" src="../images/Icon/executivo.png" />Executivo
                                     </span>
-                                    <span class="card-notify-year">${result[i].ano}</span>
-                                    <img class="img-fluid" src=${result[i].urlimagem} alt="Alternate Text" />
+                                    <span id="anocard${i}" class="card-notify-year">${result[i].ano}</span>
+                                    <img id="urlcard${i}" class="img-fluid" src=${result[i].urlimagem} alt=${result[i].urlimagem} />
                                 </div>
                                 <div class=" card-image-overlay ">
                                     <div class="row">   
                                         <div id="secaoCardCarro" class="col-md-6 col-sm-12">
                                             <img id="iconCardCarro" src="../images/Icon/cambio.png" />
-                                            <span class="card-detail-badge">Transmissão ${result[i].cambio}</span>
+                                            <span id="cambiocard${i}" class="card-detail-badge">Transmissão ${result[i].cambio}</span>
                                         </div>
                                         <div id="secaoCardCarro" class="col-md-6">
                                             <img class="img-fluid" id="iconCardCarro" src="../images/Icon/porta.png" />
@@ -264,7 +267,7 @@ verMaisExecutivo=()=>{
                                     <div class="row">
                                         <div id="secaoCardCarro" class="col-md-6">
                                             <img id="iconCardCarro" src="../images/Icon/capacidade.png" />
-                                            <span class="card-detail-badge">${result[i].capacidade} pessoas</span>
+                                            <span id="capacidadecard${i}" class="card-detail-badge">${result[i].capacidade} pessoas</span>
                                         </div>
                                         <div id="secaoCardCarro" class="col-md-6" >
                                             <img id="iconCardCarro" src="../images/Icon/airbag.png" />
@@ -278,14 +281,14 @@ verMaisExecutivo=()=>{
                                 </div>
                                 <div class="card-body text-center">
                                     <div class="">
-                                        <h5>${result[i].modelo}</h5>
+                                        <h5 id="carrocard${i}">${result[i].modelo}</h5>
                                     </div>
-                                    <a id="botaoCard" class="btn btn-primary" href="../html/seguros.html" onclick="botaoSelecionarCarro(${"card"+i})">Selecionar</a>
+                                    <a id=${"card"+i} class="btn btn-primary" href="../html/seguros.html" onclick="botaoSelecionarCarro(${"card"+i})">Selecionar</a>
                                 </div>
                             </div>
-                        </div>
-                    </div>`;
+                        </div>`;
                 }
+                texto += `</div>`;
                 $('#MAIN').html(texto);
             });
     }
@@ -294,28 +297,29 @@ verMaisExecutivo=()=>{
 verMaisIntermediario=()=>{
     let verMaisIntermediario = document.getElementById('verMaisIntermediario');
     verMaisIntermediario.onclick=()=>{
-        var texto = "";
+        var texto = `<div class="row" id="ads">`;
         $.ajax({
             url: '../php/escolherCarroIntermediario.php',
             type: 'GET',
             dataType: 'json'
             }).done(function(result){
+                texto = `<div class="row" id="ads">`;
                 for(var i=0; i<result.length; i++){
-                    texto+= `<div class="row" id="ads">
+                    texto+= `
                         <div id="cardCarro" class="col-md-4 col-lg-4">
                             <div class="card rounded">
                                 <div class="card-image">
                                     <span class="card-notify-badge">
                                         <img class="img-fluid" id="iconCardCarro" src="../images/Icon/intermediario.png" />Intermediário
                                     </span>
-                                    <span class="card-notify-year">${result[i].ano}</span>
-                                    <img class="img-fluid" src=${result[i].urlimagem} alt="Alternate Text" />
+                                    <span id="anocard${i}" class="card-notify-year">${result[i].ano}</span>
+                                    <img id="urlcard${i}" class="img-fluid" src=${result[i].urlimagem} alt=${result[i].urlimagem} />
                                 </div>
                                 <div class="card-image-overlay">
                                     <div class="row">
                                         <div id="secaoCardCarro" class="col-md-6">
                                             <img id="iconCardCarro" src="../images/Icon/cambio.png" />
-                                        <span class="card-detail-badge">Transmissão ${result[i].cambio}</span>
+                                        <span id="cambiocard${i}" class="card-detail-badge">Transmissão ${result[i].cambio}</span>
                                         </div>
                                         <div id="secaoCardCarro" class="col-md-6">
                                             <img class="img-fluid" id="iconCardCarro" src="../images/Icon/porta.png" />
@@ -325,7 +329,7 @@ verMaisIntermediario=()=>{
                                     <div class="row">
                                         <div id="secaoCardCarro" class="col-md-6">
                                             <img id="iconCardCarro" src="../images/Icon/capacidade.png" />
-                                            <span class="card-detail-badge">${result[i].capacidade} pessoas</span>
+                                            <span id="capacidadecard${i}" class="card-detail-badge">${result[i].capacidade} pessoas</span>
                                         </div>
                                         <div id="secaoCardCarro" class="col-md-6" >
                                             <img id="iconCardCarro" src="../images/Icon/airbag.png" />
@@ -339,15 +343,14 @@ verMaisIntermediario=()=>{
                                 </div>
                                 <div class="card-body text-center">
                                     <div class="">
-                                        <h5>${result[i].modelo}</h5>
+                                        <h5 id="carrocard${i}">${result[i].modelo}</h5>
                                     </div>
-                                    <a id="botaoCard" class="btn btn-primary" href="../html/seguros.html" onclick="botaoSelecionarCarro(${"card"+i})">Selecionar</a>
+                                    <a id=${"card"+i} class="btn btn-primary" href="../html/seguros.html" onclick="botaoSelecionarCarro(${"card"+i})">Selecionar</a>
                                 </div>
                             </div>
-                        </div>
-                        
-                    </div>`;
+                        </div>`;
                 }
+                texto += `</div>`;
                 $('#MAIN').html(texto);
             });
     }
@@ -356,28 +359,28 @@ verMaisIntermediario=()=>{
 verMaisEconomico=()=>{
     let verMaisEconomico = document.getElementById('verMaisEconomico');
     verMaisEconomico.onclick=()=>{
-        var texto = "";
+        var texto = `<div class="row" id="ads">`;
         $.ajax({
             url: '../php/escolherCarroEconomico.php',
             type: 'GET',
             dataType: 'json'
             }).done(function(result){
                 for(var i=0; i<result.length; i++){
-                        texto+=`<div class="row" id="ads">
+                        texto+=`
                     <div id="cardCarro" class="col-lg-4 col-md-4   ">
                         <div class="card rounded">
                             <div class="card-image">
                                 <span class="card-notify-badge">
                                     <img class="img-fluid" id="iconCardCarro" src="../images/Icon/economico.png" />Econômico
                                 </span>
-                                <span class="card-notify-year">${result[i].ano}</span>
-                                <img class="img-fluid" src=${result[i].urlimagem} alt="Alternate Text" />
+                                <span id="anocard${i}"class="card-notify-year">${result[i].ano}</span>
+                                <img id="urlcard${i}" class="img-fluid" src=${result[i].urlimagem} alt=${result[i].urlimagem} />
                             </div>
                             <div class="card-image-overlay ">
                                 <div class="row">
                                     <div id="secaoCardCarro" class="col-md-6 col-sm-12">
                                         <img id="iconCardCarro" src="../images/Icon/cambio.png" />
-                                        <span class="card-detail-badge">Transmissão ${result[i].cambio}</span>
+                                        <span id="cambiocard${i}" class="card-detail-badge">Câmbio ${result[i].cambio}</span>
                                     </div>
                                     <div id="secaoCardCarro" class="col-md-6">
                                         <img class="img-fluid" id="iconCardCarro" src="../images/Icon/porta.png" />
@@ -387,7 +390,7 @@ verMaisEconomico=()=>{
                                 <div class="row">
                                     <div id="secaoCardCarro" class="col-md-6">
                                         <img id="iconCardCarro" src="../images/Icon/capacidade.png" />
-                                        <span class="card-detail-badge">${result[i].capacidade} pessoas</span>
+                                        <span id="capacidadecard${i}" class="card-detail-badge">${result[i].capacidade} pessoas</span>
                                     </div>
                                     <div id="secaoCardCarro" class="col-md-6" >
                                         <img id="iconCardCarro" src="../images/Icon/airbag.png" />
@@ -401,13 +404,14 @@ verMaisEconomico=()=>{
                             </div>
                             <div class="card-body text-center">
                                 <div class="">
-                                    <h5>${result[i].modelo}</h5>
+                                    <h5 id="carrocard${i}">${result[i].modelo}</h5>
                                 </div>
                                 <a id=${"card"+i} class="btn btn-primary" href="../html/seguros.html" onclick="botaoSelecionarCarro(${"card"+i})">Selecionar</a>
                             </div>
                         </div>
                     </div>`;
                 }
+                texto += `</div>`;
                 $('#MAIN').html(texto);
             });
     }
@@ -415,6 +419,32 @@ verMaisEconomico=()=>{
 
 botaoSelecionarCarro=(id)=>{
     var carInfo = new Array();
-    carInfo = {carro: id.id};
-        sessionStorage.setItem("carInfo", JSON.stringify(carInfo));
+    let id2 = 'carro'+id.id;
+    let card2 = document.getElementById(id2);
+    let modelo = card2.innerHTML;
+    
+    let id3 = 'url'+id.id;
+    let card3= document.getElementById(id3);
+    let urlimagemCarro = card3.alt;
+
+    let id4 = 'capacidade'+id.id;
+    let card4 = document.getElementById(id4);
+    let capacidadeCarro = card4.innerHTML.substring(1, 0);
+
+    let id5 = 'cambio'+id.id;
+    let card5 = document.getElementById(id5);
+    let cambioCarro = card5.innerHTML;
+
+    let id6 = 'ano'+id.id;
+    let card6 = document.getElementById(id6);
+    let anoCarro = card6.innerHTML;
+
+    carInfo = {
+        modeloCarro : modelo,
+        imagemCarro : urlimagemCarro,
+        capacidadeCarro : capacidadeCarro,
+        cambioCarro : cambioCarro,
+        anoCarro : anoCarro
+    };
+    sessionStorage.setItem("carInfo", JSON.stringify(carInfo));
 }

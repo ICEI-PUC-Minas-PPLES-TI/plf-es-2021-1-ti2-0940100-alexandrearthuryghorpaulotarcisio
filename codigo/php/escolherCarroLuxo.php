@@ -6,7 +6,7 @@
     $password = "@Pucminas";
     $connection = pg_connect("host=$host dbname=$database user=$user password=$password");
 
-    $result = pg_query($connection, "SELECT * from automovel where idcategoria = 1");
+    $result = pg_query($connection, "SELECT * from automovel where idcategoria = 1 and disponibilidade = 'S'");
     $arr = pg_fetch_all($result);
     echo json_encode($arr);
 

@@ -64,13 +64,29 @@ loadData=()=>{
             valor+= seguroInfos[2].segSuperPreco;
         }
     }
+    if(sessionStorage.hasOwnProperty("carInfo")){
+        carInfos = JSON.parse(sessionStorage.getItem("carInfo"));
+        let imagem = document.getElementById('imagemCarro');
+        imagem.src = carInfos.imagemCarro;
+        let modelo = document.getElementById('modeloCarro');
+        modelo.innerHTML = carInfos.modeloCarro;
+        let cambio = document.getElementById('cambioCarro');
+        cambio.innerHTML = carInfos.cambioCarro;
+        cambio.innerHTML = cambio.innerHTML.includes("Manual") ? "Manual" : "Automático";
+        let ano = document.getElementById('anoCarro');
+        ano.innerHTML = carInfos.anoCarro;
+        let capacidade = document.getElementById('capacidadeCarro');
+        capacidade.innerHTML = carInfos.capacidadeCarro + " pessoas";
+    }
     let preco = document.getElementById('precoFinal');
-    preco.innerHTML = `Valor: R$ ${valor}`;
+    preco.innerHTML = `${valor}`;
 }
 
 confirmar=()=>{
     let btnConfirmar = document.getElementById('btnConfirmar');
     btnConfirmar.onclick=()=>{
+        let valorAluguel = document.getElementById('precoFinal');
+        sessionStorage.setItem("aluguelPrecoInfo", valorAluguel.innerHTML);
         let MAIN = document.getElementById('MAIN');
         MAIN.innerHTML = 
         `
@@ -116,19 +132,38 @@ confirmar=()=>{
 
 voltarHome=()=>{
     let voltar = document.getElementById('voltarLink');
-        function alerta() {alert("Selecione uma nota.")};
-        voltar.onclick=()=>{
-            
-            let valor = document.querySelector('input[name="inlineRadioOptions"]:checked');
-            
-            if(valor != null){
-                console.log(valor.value);
-                window.location.href = "http://localhost/codigo/html/home.html"
-            }else{
-                alerta();
-            }
-            
+    function alerta() {alert("Selecione uma nota.")};
+    voltar.onclick=()=>{
+        let nota = document.querySelector('input[name="inlineRadioOptions"]:checked').value;
         
+        if(nota != null){
+            let retiradaInfos = JSON.parse(sessionStorage.getItem("reservaInfo"));
+            let dataRetirada = retiradaInfos[0].dataRetirada;
+            let horaRetirada = retiradaInfos[1].horaRetirada;
+            let dataDevolucao = retiradaInfos[2].dataDevolucao;
+            let horaDevolucao = retiradaInfos[3].horarioDevolucao;
+            let aluguelPrecoInfo = JSON.parse(sessionStorage.getItem("aluguelPrecoInfo"));
+            let user = JSON.parse(sessionStorage.getItem("user"));
+            let carInfo = JSON.parse(sessionStorage.getItem("carInfo"));
+
+            $.post("../php/efetuaAluguel.php", {
+                dataRetirada : dataRetirada, 
+                horaRetirada : horaRetirada, 
+                dataDevolucao : dataDevolucao, 
+                horaDevolucao : horaDevolucao,
+                nota : parseInt(nota),
+                valorAluguel : parseFloat(aluguelPrecoInfo),
+                usuario : user[0].email,
+                modelo : carInfo.modeloCarro
+
+            }, function(msg){
+            });
+            //voltar.href = "../html/home.html";
+        }else{
+            alerta();
         }
+        
+    
+    }
 }
 

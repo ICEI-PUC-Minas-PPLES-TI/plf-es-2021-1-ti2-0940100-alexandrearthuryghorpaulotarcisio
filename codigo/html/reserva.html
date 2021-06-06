@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../css/reserva.css">
     <script src="../js/reserva.js"></script>
+    <script type="text/javascript" src="../js/jquery.js"></script>
     <link rel="icon" href="../images/Icon/favicon.png" type="image/x-icon">
     <title>Confirmar reserva</title>
 </head>
@@ -31,11 +32,12 @@
                     <div class="wrapper">
                         <div class="header">Resumo do aluguel</div>
                         <div class="banner-img">
-                            <img src="../images/Uno2021.jpg" alt="Image 1">
+                            <img id="imagemCarro" src="" alt="Automovel">
                         </div>
                         <div id="valor" class="">
                             <div>
-                                <p id="precoFinal"></p> 
+                                <p style="display: inline;">Valor R$:</p>
+                                <p id="precoFinal" style="display: inline;"></p> 
                             </div>
                         </div>
                         <div class="dates">
@@ -49,22 +51,22 @@
 
                         <div class="stats">
                             <div>
-                                <strong>MODELO</strong> Uno
+                                <p><strong>MODELO</strong></p><p id="modeloCarro"></p>
                             </div>
                             <div>
-                                <strong>CÂMBIO</strong> Manual
+                                <p><strong>CÂMBIO</strong></p><p id="cambioCarro"></p>
                             </div>
                             <div>
-                                <strong>ANO</strong> 2021
+                                <p><strong>MODELO</strong></p><p id="anoCarro"></p>
                             </div>
                         </div>
 
                         <div id="segundaLinha" class="stats">
                             <div>
-                                <strong>CAPACIDADE</strong> 5 pessoas
+                                <p><strong>CAPACIDADE</strong></p><p id="capacidadeCarro"></p>
                             </div>
                             <div id="seguro">
-                                <p id="seguroinf"></p>>
+                                <p id="seguroinf"></p>
                             </div>
                         </div>
 
