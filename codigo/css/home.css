@@ -60,7 +60,7 @@ body {
 }
 
 .parallax {
-    background-image: url("/codigo/images/Galpao.png");
+    background-image: url("../images/Galpao.png");
     min-height: 500px; 
     background-attachment: fixed;
     background-position: center;
