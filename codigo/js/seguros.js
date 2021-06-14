@@ -142,15 +142,15 @@ acessorios =()=>{
                                         </div>
                                     </div>
                                 </div>
+                                <div id="btnProximo" class=" container-fluid mt-3 mb-4 row">
+                                <div class="col-md-8">
+                                    <a id="btn_ProximoEtapa1" href="#" class="btn btn-primary">Próximo</a>
+                                </div>
+                            </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div id="btnProximo" class=" container-fluid mt-3 mb-4 row">
-            <div class="col-md-8">
-                <a id="btn_ProximoEtapa1" href="#" class="btn btn-primary">Próximo</a>
             </div>
         </div>
     `;

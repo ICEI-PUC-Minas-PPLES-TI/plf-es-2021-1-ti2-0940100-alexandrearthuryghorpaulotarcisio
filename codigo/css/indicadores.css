@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comfortaa';
+}
+
+body {
+    background-color: #EDF2F4;
+}
+
 #titulo{
     text-align: left;
     align-items: center;
@@ -13,9 +26,36 @@
     text-decoration:none;
 }
 
-.header{
-    background-color: red;
-    min-height: 80px;
+.HEADER {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+}
+
+.HEADER i {
+    font-size: 20pt;
+}
+
+.HEADER button{
+    background: none;
+    border: none;
+}
+
+.HEADER__user {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btnVoltar{
+    display: inline-block;
+}
+
+#voltar i {
+    color: #CC0D0D;
 }
 
 .main{
@@ -29,7 +69,7 @@
     text-align: center;
     font-weight: bold;
     font-size: x-large;
-    color: red;
+    color: #CC0D0D;
 }
 
 .indicador{
@@ -45,12 +85,30 @@
     font-size:larger;
 }
 
-.footer {
-    background-color: red;
-    min-height: 80px;
+footer {
+    display: flex; 
+    background: white;
+    margin-top: 120px;
+    padding: 16px;
+    align-items: center;
+}
+.footer-img{
+    width: 10%;
+}
+.footer-loc{
+    display: flex;
+    margin:auto;
+} 
+
+
+.footer-icon{ 
+    width: 30%;
 }
 
-.footer p{
-    color: white;
-    text-align: center;
+.copyright {
+    display: flex;         
+    align-self: center;
+    font-size: 8pt;
+    opacity: 0.7;
+    margin-bottom: 0px;
 }

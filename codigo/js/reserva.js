@@ -93,7 +93,6 @@ confirmar=()=>{
             <div class="fimTitulo" id="fim">
                 <label for="">
                     <p id="tituloEtapa1" >Obrigado!</p>
-
                     <div class="avaliacao">
                         <p>Nos ajude a melhorar sua experiência. Dê uma nota de 1 a 5, para avaliar nosso sistema.</p>
                         <div class="form-check form-check-inline">
