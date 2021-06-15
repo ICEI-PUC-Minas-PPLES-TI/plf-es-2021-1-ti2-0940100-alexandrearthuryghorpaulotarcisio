@@ -116,3 +116,46 @@ footer {
     opacity: 0.7;
     margin-bottom: 0px;
 }
+#tituloPieChart{
+    display: flex;
+    justify-content: center;
+}
+
+#conteudoPieChart{
+    display: flex;
+    align-items: center;
+}
+
+#pie-chart {
+    width: 500px;
+    height: 250px;
+    margin: auto;
+    padding: 20px;
+}
+#pie-chart::before {
+content: "";
+position: absolute;
+display: block;
+width: 120px;
+height: 115px;
+left: 315px;
+top: 0;
+}
+#pie-chart::after {
+content: "";
+position: absolute;
+display: block;
+top: 260px;
+left: 70px;
+width: 170px;
+height: 2px;
+border-radius: 50%;
+}
+
+#footerPieChart{
+font-size: 13px;
+opacity: 0.7;
+display: flex;
+justify-content: flex-end;
+padding: 20px;
+}

@@ -1,42 +1,86 @@
 
 window.onload=()=>{
-    //indicadoresDesempenso();
     indicadores();
 }
 
 indicadores=()=>{
-        $.ajax({
-        url: '../php/indicadores.php',
-        type: 'GET',
-        dataType: 'json'
-        }).done(function(result){
-            console.log(result);
-            
-            // Indicador 1
-            let qtdClientesUltimoTrimestre = parseInt(result[5].ultimo_trimestre);
-            let qtdClientesUltimoSemestre = parseInt(result[6].ultimo_semestre);
+    $.ajax({
+    url: '../php/indicadores.php',
+    type: 'GET',
+    dataType: 'json'
+    }).done(function(result){
+        console.log(result);
+        
+        
+        // Indicador 1
+        let qtdClientesUltimoTrimestre = parseInt(result[5].ultimo_trimestre);
+        let qtdClientesUltimoSemestre = parseInt(result[6].ultimo_semestre);
 
-            let indicador1_taxaCrescimento = (100*(qtdClientesUltimoTrimestre - qtdClientesUltimoSemestre) / qtdClientesUltimoSemestre);
-            indicador1.innerHTML = `${indicador1_taxaCrescimento}%`;
+        let indicador1_taxaCrescimento = (100*(qtdClientesUltimoTrimestre - qtdClientesUltimoSemestre) / qtdClientesUltimoSemestre);
+        indicador1.innerHTML = `${indicador1_taxaCrescimento}%`;
 
-            // Indicador 2
-            let indicador2 = document.getElementById('indicador2');
-            indicador2.innerHTML = parseFloat(result[0].media_nota).toFixed(2);
+        // Indicador 2
+        let indicador2 = document.getElementById('indicador2');
+        indicador2.innerHTML = parseFloat(result[0].media_nota).toFixed(2);
 
-            // Indicador 3
-            let indicador3 = document.getElementById('indicador3');
-            indicador3.innerHTML = `R$${parseInt(result[1].media_gasto)},00`;
+        // Indicador 3
+        let indicador3 = document.getElementById('indicador3');
+        indicador3.innerHTML = `R$${parseInt(result[1].media_gasto)},00`;
 
-            // indicador 5
-            let indicador51 = document.getElementById('indicador51');
-            indicador51.innerHTML = `R$${parseInt(result[4].avg)},00`;
-
-            let indicador52 = document.getElementById('indicador52');
-            indicador52.innerHTML = `R$${parseInt(result[3].avg)},00`;
-
-            let indicador53 = document.getElementById('indicador53');
-            indicador53.innerHTML = `R$${parseInt(result[2].avg)},00`;
+        dados = parseInt(result[4].avg);
+        dados2 = parseInt(result[3].avg);
+        dados3 = parseInt(result[2].avg);
+        google.load("visualization", "1", {packages:["corechart"]});
+        google.setOnLoadCallback(drawCharts);
+        drawCharts();
 
 
-        });
+
+    });
+}
+
+
+function drawCharts(result) {
+    
+    // BEGIN PIE CHART
+    
+    // pie chart data
+    var pieData = google.visualization.arrayToDataTable([
+      ['Categorias', 'Valores'],
+      ['Econômica'   ,      dados],
+      ['Intermediária',   dados2],
+      ['Executiva',   dados3]
+    ]);
+    // pie chart options
+    var pieOptions = {
+      backgroundColor: 'transparent',
+      pieHole: 0.4,
+      colors: [ "cornflowerblue", 
+                "olivedrab", 
+                "orange", 
+                "tomato", 
+                "crimson", 
+                "purple", 
+                "turquoise", 
+                "forestgreen", 
+                "navy", 
+                "gray"],
+      pieSliceText: 'value',
+      tooltip: {
+        text: 'percentage'
+      },
+      fontName: 'Open Sans',
+      chartArea: {
+        width: '100%',
+        height: '100%'
+      },
+      legend: {
+        textStyle: {
+          fontSize: 13
+        }
+      }
+    };
+    // draw pie chart
+    var pieChart = new google.visualization.PieChart(document.getElementById('pie-chart'));
+    pieChart.draw(pieData, pieOptions);
 }
