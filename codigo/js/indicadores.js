@@ -33,9 +33,6 @@ indicadores=()=>{
         google.load("visualization", "1", {packages:["corechart"]});
         google.setOnLoadCallback(drawCharts);
         drawCharts();
-
-
-
     });
 }
 

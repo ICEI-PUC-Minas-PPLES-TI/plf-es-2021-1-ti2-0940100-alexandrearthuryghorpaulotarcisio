@@ -23,8 +23,9 @@
     //indicador 3
     $query3 = "select sum(valor)/count(DISTINCT cpf) as media_gasto from aluguel";
    
+    //indicador 4
+    $query4 = "select sum(a.valor) totalCliente, a.cpf, c.nome from aluguel a inner join cliente c on a.cpf = c.cpf group by a.cpf, c.nome order by sum(a.valor) desc";
     
-
     //indicador 5
     $query5 = "select au.idcategoria, avg(al.valor)
     from aluguel al join automovel au on al.placa = au.placa join categoria cat on au.idcategoria = cat.id
@@ -42,6 +43,9 @@
     //indicador 3
     $result3 = pg_query($connection, $query3);
 
+    //indicador 4
+    $result4 = pg_query($connection, $query4);
+
     //indicador 5
     $result5 = pg_query($connection, $query5);
 
@@ -54,12 +58,15 @@
 
     //indicador 3
     $arr2 = pg_fetch_all($result3);
+    
+    //indicador 4
+    $arr4 = pg_fetch_all($result4);
 
     //indicador 5
     $arr5 = pg_fetch_all($result5);
 
 
-    $resultado = array_merge($arr, $arr2, $arr5, $arr1, $arr11);
+    $resultado = array_merge($arr, $arr2, $arr5, $arr1, $arr11, $arr4);
     
     echo json_encode($resultado);
     pg_close($connection);
