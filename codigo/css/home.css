@@ -12,6 +12,7 @@ body {
 
 .header {
     background-color: white;
+    height: 100px;
 }
 
 #header-logo {

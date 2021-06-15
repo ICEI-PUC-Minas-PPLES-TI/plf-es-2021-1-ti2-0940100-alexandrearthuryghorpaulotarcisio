@@ -1,14 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
+
 * {
     margin: 0;
     padding: 0;
     font-family: 'Comfortaa';
 }
 
-body {
+html, body {
     background-color: #EDF2F4;
+    display: flex;
+    flex-direction: column;
 }
 
 #titulo{
@@ -61,7 +64,6 @@ body {
 .main{
     margin-top: 20px;
     margin-bottom: 20px;
-    background-color: rgb(216, 216, 209);
     padding: 20px;
 }
 
@@ -88,21 +90,23 @@ body {
 footer {
     display: flex; 
     background: white;
-    margin-top: 120px;
     padding: 16px;
     align-items: center;
+    margin-top: 120px;
 }
+
 .footer-img{
     width: 10%;
 }
+
 .footer-loc{
     display: flex;
     margin:auto;
 } 
 
-
 .footer-icon{ 
-    width: 30%;
+    width: 64px;
+    height: 64px;
 }
 
 .copyright {

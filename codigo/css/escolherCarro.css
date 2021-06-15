@@ -7,8 +7,11 @@
     font-family: 'Comfortaa';
 }
 
-body {
+html, body {
     background-color: #EDF2F4;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .HEADER {
@@ -242,21 +245,22 @@ body {
 footer {
     display: flex; 
     background: white;
-    margin-top: 120px;
     padding: 16px;
     align-items: center;
 }
+
 .footer-img{
     width: 10%;
 }
+
 .footer-loc{
     display: flex;
     margin:auto;
 } 
 
-
 .footer-icon{ 
-    width: 30%;
+    width: 64px;
+    height: 64px;
 }
 
 .copyright {
