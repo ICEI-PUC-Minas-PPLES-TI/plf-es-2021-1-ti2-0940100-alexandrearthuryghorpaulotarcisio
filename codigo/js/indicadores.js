@@ -20,10 +20,21 @@ indicadores=()=>{
         let indicador2 = document.getElementById('indicador2');
         indicador2.innerHTML = parseFloat(result[0].media_nota).toFixed(2);
 
+        // indicador 4
+        cliente1 = result[7];
+        cliente2 = result[8];
+        cliente3 = result[9];
+        cliente4 = result[10];
+        cliente5 = result[11];
+        cliente6 = result[12];
+        cliente7 = result[13];
+        cliente8 = result[14];
+
         // Indicador 3
         let indicador3 = document.getElementById('indicador3');
         indicador3.innerHTML = `R$${parseInt(result[1].media_gasto)},00`;
 
+        // Indicador 5
         dados = parseInt(result[4].avg);
         dados2 = parseInt(result[3].avg);
         dados3 = parseInt(result[2].avg);
