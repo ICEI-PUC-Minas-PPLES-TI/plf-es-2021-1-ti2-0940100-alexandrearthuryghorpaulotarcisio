@@ -9,9 +9,6 @@ indicadores=()=>{
     type: 'GET',
     dataType: 'json'
     }).done(function(result){
-        console.log(result);
-        
-        
         // Indicador 1
         let qtdClientesUltimoTrimestre = parseInt(result[5].ultimo_trimestre);
         let qtdClientesUltimoSemestre = parseInt(result[6].ultimo_semestre);

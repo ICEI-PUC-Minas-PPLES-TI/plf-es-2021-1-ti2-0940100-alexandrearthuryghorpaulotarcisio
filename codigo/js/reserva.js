@@ -40,27 +40,27 @@ loadData=()=>{
         seguroInfos = JSON.parse(sessionStorage.getItem("seguroInfo"));
         let seguroinformacao = document.getElementById('seguroinf');
         if(seguroInfos[0] && seguroInfos[1] && seguroInfos[2]){
-            seguroinformacao.innerHTML = ` Básico + Completo + Super`;
+            seguroinformacao.innerHTML = ` Vidros + Lataria + Mecânica`;
             valor+= seguroInfos[0].ssegCompPreco + seguroInfos[1].segBasPreco + seguroInfos[2].segSuperPreco;
         }else if(seguroInfos[0] && seguroInfos[1]){
-            seguroinformacao.innerHTML = ` Básico + Completo`;
+            seguroinformacao.innerHTML = ` Vidros + Lataria`;
             valor+= seguroInfos[0].ssegCompPreco + seguroInfos[1].segBasPreco;
         }else if(seguroInfos[0] && seguroInfos[2]){
-            seguroinformacao.innerHTML = ` Completo + Super`;
+            seguroinformacao.innerHTML = ` Lataria + Mecânica`;
             valor+= seguroInfos[0].ssegCompPreco + seguroInfos[2].segSuperPreco;
         }else if(seguroInfos[1] && seguroInfos[2]){
-            seguroinformacao.innerHTML = ` Básico + Super`;
+            seguroinformacao.innerHTML = ` Vidros + Mecênica`;
             valor+= seguroInfos[1].segBasPreco + seguroInfos[1].segSuperPreco;
         }else if(seguroInfos[0]){
-            seguroinformacao.innerHTML = ` Básico`;
+            seguroinformacao.innerHTML = ` Vidros`;
             valor+= seguroInfos[0].ssegCompPreco;;
         }
         else if(seguroInfos[1]){
-            seguroinformacao.innerHTML = ` Completo`;
+            seguroinformacao.innerHTML = ` Lataria`;
             valor+= seguroInfos[1].segBasPreco;
         }
         else if(seguroInfos[2]){
-            seguroinformacao.innerHTML = ` Super`;
+            seguroinformacao.innerHTML = ` Mecânica`;
             valor+= seguroInfos[2].segSuperPreco;
         }
     }
@@ -128,9 +128,9 @@ confirmar=()=>{
 
 voltarHome=()=>{
     let voltar = document.getElementById('voltarLink');
-    function alerta() {alert("Selecione uma nota.")};
+    function alerta() {alert("Selecione uma nota!")};
     voltar.onclick=()=>{
-        let nota = document.querySelector('input[name="inlineRadioOptions"]:checked').value;
+        let nota = document.querySelector('input[name="inlineRadioOptions"]:checked') && document.querySelector('input[name="inlineRadioOptions"]:checked').value ? document.querySelector('input[name="inlineRadioOptions"]:checked').value : null;
         
         if(nota != null){
             let retiradaInfos = JSON.parse(sessionStorage.getItem("reservaInfo"));
@@ -151,15 +151,12 @@ voltarHome=()=>{
                 valorAluguel : parseFloat(aluguelPrecoInfo),
                 usuario : user[0].email,
                 modelo : carInfo.modeloCarro
-
             }, function(msg){
             });
             voltar.href = "../html/home.html";
         }else{
             alerta();
         }
-        
-    
     }
 }
 

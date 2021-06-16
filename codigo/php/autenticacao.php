@@ -1,7 +1,6 @@
 <?php
-    header('Content-type: application/json');
-    $campoEmail = filter_input(INPUT_GET, 'email');
-    $campoSenha = filter_input(INPUT_GET, 'password');
+    $campoEmail = $_POST['email'];
+    $campoSenha = $_POST['senha'];
     $host = "baseti.postgres.database.azure.com";
     $database = "localexx";
     $user = "adm@baseti";
@@ -23,12 +22,7 @@
 
     pg_free_result($result_set);
     pg_close($connection);
-    if($loginCorreto){
-        header('Location: ../html/home.html');
-        exit();
-    } else {
-        header('Location: ../html/login.html');
-        exit();
-    }
+    
+    echo json_encode($loginCorreto);
     
 ?>

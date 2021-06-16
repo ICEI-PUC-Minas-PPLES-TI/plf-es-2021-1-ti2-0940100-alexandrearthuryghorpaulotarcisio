@@ -7,9 +7,9 @@ window.onload = () => {
 campoEmail = (user) => {
     let fieldEmail = document.getElementById('username');
     fieldEmail.onchange = () => {
-        user.push({
+        user[0] = {
             email: fieldEmail.value
-        });
+        };
         sessionStorage.setItem("user", JSON.stringify(user));
     }
 }
@@ -17,9 +17,9 @@ campoEmail = (user) => {
 campoSenha = (user) => {
     let fieldSenha = document.getElementById('password');
     fieldSenha.onchange = () => {
-        user.push({
+        user[1] = {
             password: fieldSenha.value
-        });
+        };
         sessionStorage.setItem("user", JSON.stringify(user));
     }
 }

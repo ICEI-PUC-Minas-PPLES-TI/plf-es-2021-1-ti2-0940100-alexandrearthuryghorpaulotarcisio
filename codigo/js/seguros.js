@@ -240,15 +240,15 @@ seguros=()=>{
                                 <i class="">
                                     <img id="imgSeguros" src="../images/Icon/capture-20210518-202714.png" alt="">
                                 </i>
-                                <h3>Proteção Básica</h3>
+                                <h3>Proteção dos vidros</h3>
                             </div>
                             <div class="panel-body text-center">
                                 <p><strong>R$9,00</strong></p>
                             </div>
                             <ul class="list-group text-center">
-                                <li class="list-group-item"><i class="fa fa-check"></i> Proteção - LDW</li>
+                                <li class="list-group-item"><i class="fa fa-check"></i> Proteção dos retrovisores e vidros</li>
                                 <li class="list-group-item"><i class="fa fa-check"></i> Protecção contra furto, roubo, perda total</li>
-                                <li class="list-group-item"><i class="fa fa-check"></i> Danos e/ou avarias causados exclusivamente ao veículo</li>
+                                <li class="list-group-item"><i class="fa fa-check"></i> Danos e/ou avarias causados exclusivamente ao vidros veículo</li>
                             </ul>
                             <div class="panel-footer">
                                 <input id="selecionarSegBas" type="checkbox" value="false">
@@ -262,15 +262,15 @@ seguros=()=>{
                                 <i class="">
                                     <img id="imgSeguros" src="../images/Icon/capture-20210518-202635.png" alt="">
                                 </i>
-                                <h3>Proteção Completa</h3>
+                                <h3>Proteção da lataria</h3>
                             </div>
                             <div class="panel-body text-center">
                                 <p><strong>R$24,00</strong></p>
                             </div>
                             <ul class="list-group text-center">
-                                <li class="list-group-item"><i class="fa fa-check"></i> Proteção Básica-LDW</li>
-                                <li class="list-group-item"><i class="fa fa-check"></i> Redução de Coparticipação</li>
-                                <li class="list-group-item"><i class="fa fa-check"></i> Proteção contra terceiros e ocupantes ALI</li>
+                                <li class="list-group-item"><i class="fa fa-check"></i> Proteção da lataria total do veículo</li>
+                                <li class="list-group-item"><i class="fa fa-check"></i> Proteção contra arranhões e danos leves</li>
+                                <li class="list-group-item"><i class="fa fa-check"></i> Inclui portas, teto, capô, etc</li>
                             </ul>
                             <div class="panel-footer">
                                 <input id="selecionarSegComp" type="checkbox" value="false">
@@ -284,15 +284,15 @@ seguros=()=>{
                                 <i class="">
                                     <img id="imgSeguros" src="../images/Icon/capture-20210518-202734.png" alt="">
                                 </i>
-                                <h3>Proteção Super</h3>
+                                <h3>Proteção parte mecânica</h3>
                             </div>
                             <div class="panel-body text-center">
                                 <p><strong>R$44,00</strong></p>
                             </div>
                             <ul class="list-group text-center">
-                                <li class="list-group-item"><i class="fa fa-check"></i> Proteção Completa-LDW</li>
-                                <li class="list-group-item"><i class="fa fa-check"></i> Maior Redução de Coparticipação</li>
-                                <li class="list-group-item"><i class="fa fa-check"></i> Proteção contra terceiros e ocupantes ALI+PAI</li>
+                                <li class="list-group-item"><i class="fa fa-check"></i> Proteção do motor do veículo</li>
+                                <li class="list-group-item"><i class="fa fa-check"></i> Cobre danos leves, não críticos</li>
+                                <li class="list-group-item"><i class="fa fa-check"></i> Inclui reposição de peças</li>
                             </ul>
                             <div class="panel-footer">
                                 <input id="selecionarSegSuper" type="checkbox" value="false">
