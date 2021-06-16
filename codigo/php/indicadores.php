@@ -24,7 +24,7 @@
     $query3 = "select sum(valor)/count(DISTINCT cpf) as media_gasto from aluguel";
    
     //indicador 4
-    $query4 = "select sum(a.valor) totalCliente, a.cpf, c.nome from aluguel a inner join cliente c on a.cpf = c.cpf group by a.cpf, c.nome order by sum(a.valor) desc";
+    $query4 = "select sum(a.valor)/count(*) gastoMedioCliente, a.cpf, c.nome from aluguel a inner join cliente c on a.cpf = c.cpf group by a.cpf, c.nome order by sum(a.valor) desc";
     
     //indicador 5
     $query5 = "select au.idcategoria, avg(al.valor)
