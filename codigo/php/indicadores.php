@@ -10,18 +10,15 @@
     $query1 = "select count(nome) as ultimo_trimestre from cliente
     where data_inscricao > CURRENT_DATE - interval '3 months'";
     
-   
 
     $query11 = "select count(nome) as ultimo_semestre from cliente
-    where data_inscricao < CURRENT_DATE - interval '3 months'";
+    where data_inscricao > CURRENT_DATE - interval '6 months'";
 
     //indicador 2
-    $query2 = "select avg(nota)as media_nota from aluguel";
-    
-    
+    $query2 = "select avg(nota)as indicador2 from aluguel";
 
     //indicador 3
-    $query3 = "select sum(valor)/count(DISTINCT cpf) as media_gasto from aluguel";
+    $query3 = "select sum(valor)/count(DISTINCT cpf) as indicador3 from aluguel";
    
     //indicador 4
     $query4 = "select sum(a.valor)/count(*) gastoMedioCliente, a.cpf, c.nome from aluguel a inner join cliente c on a.cpf = c.cpf group by a.cpf, c.nome order by sum(a.valor) desc";
