@@ -13,6 +13,11 @@ body {
 .header {
     background-color: white;
     height: 100px;
+    padding: 0px !important;
+}
+
+#navbarNav {
+    background-color: white;
 }
 
 #header-logo {
