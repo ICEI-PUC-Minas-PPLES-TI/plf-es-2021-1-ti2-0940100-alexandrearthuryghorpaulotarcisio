@@ -232,7 +232,12 @@ Obs.: todas as informações para gerar os indicadores devem estar no diagrama d
 
 ## 7.Sistema desenvolvido
 
-Faça aqui uma breve descrição do software e coloque as principais telas com uma explicação de como usar cada uma.
+O sistema possui um total de oito telas, sendo elas: home, escolha do veículo(etapa 1, etapa 2, etapa 3 e etapa 4), tela de avaliação, tela de cadastro, tela de login.
+A primeira tela é a de login, o usuário pode navegar entre escolher o veículo  e fazer seu login, caso esteja logado, há a possibilidade de sair de sua conta.
+Partindo para as telas de escolher o veículo separada por etapas, a etapa 1 é referente as datas, nessa tela o usuário deve informar suas intenções de retirada e devolução do item alugado, na etapa 2 são apresentadas as opções dos automóveis, na etapa 3 deve-se escolher acessórios para o veículo, e por último (etapa 4) contém as opções de seguros.
+A tela de login possui os campos de email e senha, para poder efetuar o login o usuário precisa está cadastrado.
+A tela de cadastro contém os campos para o preenchimento de informações pessoais e são elas: Nome Completo, Email, Data de Nascimento, CPF, CNH, Sexo, Senha e Confirmar Senha.
+Quando concluída a reserva do veículo o usuário será orientado a fazer uma avaliação do serviço que acabou de usar, essa avaliação se da por uma nota final do usuário podendo ser de 1 a 5, no caso 1 é a pior avaliação possível e 5 a melhor. Caso o usuário não queira fazer essa avaliação ele pode usar um link para retornar à página principal.
 
 ## 8. Avaliação
 
