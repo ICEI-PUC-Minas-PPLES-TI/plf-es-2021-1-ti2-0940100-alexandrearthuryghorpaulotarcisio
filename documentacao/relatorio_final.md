@@ -270,15 +270,14 @@ http://www.pucminas.br/imagedb/documento/DOC\_DSC\_NOME\_ARQUI20160217102425.pdf
 
 # APÊNDICES
 
-**Colocar link:**
 
-Do código;
+[Código](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2021-1-ti2-0940100-alexandrearthuryghorpaulotarcisio/tree/main/codigo);
 
-Dos artefatos;
+[Artefatos](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2021-1-ti2-0940100-alexandrearthuryghorpaulotarcisio/tree/main/artefatos);
 
-Da apresentação final;
+[Apresentação final](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2021-1-ti2-0940100-alexandrearthuryghorpaulotarcisio/blob/main/documentacao/RentCarPoint.pptx);
 
-Do vídeo de apresentação.
+[Vídeo de apresentação](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2021-1-ti2-0940100-alexandrearthuryghorpaulotarcisio/blob/main/documentacao/LocaLex.mp4).
 
 
 
