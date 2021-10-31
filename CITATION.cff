@@ -1,0 +1,33 @@
+cff-version: 1.0.1
+message: Please cite this software using these metadata.
+title: LocaLex Rent Car Point
+authors:
+  - family-names: Costa e Souza
+    given-names: Alexandre 
+  - family-names: Vítor Sapore
+    given-names: Arthur 
+  - family-names: Ribas Gomes
+    given-names: Yghor 
+  - family-names: Jesus de Sousa
+    given-names: Paulo Victor 
+  - family-names: Pais de Souza Júnior
+    given-names: Tarcísio 
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Vander Ramos
+    given-names: Claudiney 
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Bastos De Paula
+    given-names: Hugo 
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Christina de Paiva Carvalho
+    given-names: Joyce
+keywords:
+  - Locação
+  - Veículos
+repository-code: https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2021-1-ti2-0940100-alexandrearthuryghorpaulotarcisio
+license: CC-BY-4.0
+version: 1.0.0
+date-released: 2021-06-20
